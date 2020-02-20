@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+h1 {
+  font-family: 'Caveat';
+}
+
+body {
+  font-family: 'Barlow';
+}
+
+.button {
+  background-color: #FF7948;
+  /* background-color: #30AFFF; */
+  height: 35px;
+  border-radius: 5px;
+  font-family: 'Barlow';
+  font-weight: bold;
+}
+
+nav {
+  /* background-color: tomato; */
+  border-bottom: 3px solid #30AFFF;
+}

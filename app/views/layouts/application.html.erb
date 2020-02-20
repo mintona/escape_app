@@ -4,12 +4,17 @@
     <title>EscapeApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Barlow' rel='stylesheet'>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <nav>
+      <%= image_tag("logos/escape (1).png", height: '60px') %>
+      <%= link_to 'About' %>
+    </nav>
     <%= yield %>
   </body>
 </html>

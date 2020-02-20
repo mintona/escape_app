@@ -13,6 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ /* colors:  */
+ /* blue: #30AFFF
+ orange: #FF7948
+ yellow: #F9B916 */
+ 
 h1 {
   font-family: 'Caveat';
 }

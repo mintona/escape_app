@@ -1,0 +1,10 @@
+<center>
+  <h1>Welcome!</h1>
+    <h3>Your perfect vacation is only a few clicks away.</h3>
+
+    <% if current_user %>
+      <p>You have already signed in. Would you like to plan a trip?</p>
+    <% else %>
+      <%= button_to 'Sign-In with Google', google_oauth2_login_path, class: "button"%>
+    <% end %>
+</center>

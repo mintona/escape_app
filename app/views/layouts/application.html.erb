@@ -4,12 +4,27 @@
     <title>EscapeApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Barlow' rel='stylesheet'>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <nav>
+      <p>
+      <%= image_tag('logos/escape_nav.png', height: '60px') %>
+      <%= "Hi, #{current_user.first_name}" if current_user %>
+      <%= link_to 'About' %>
+      <%= link_to 'Log Out', '/logout' if current_user %>
+      </p>
+    </nav>
+
+    <% flash.each do |name, msg| %>
+      <div class ="<%= name %>-flash">
+        <p class ="<%= name %>-flash"><%= msg %></p>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

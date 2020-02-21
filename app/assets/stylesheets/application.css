@@ -13,3 +13,52 @@
  *= require_tree .
  *= require_self
  */
+ /* colors:  */
+ /* blue: #30AFFF
+ orange: #FF7948
+ yellow: #F9B916 */
+
+h1 {
+  font-family: 'Caveat';
+}
+
+body {
+  font-family: 'Barlow';
+}
+
+a:link {
+  text-decoration: none;
+  color: #30AFFF;
+}
+
+a:visited {
+  color: #30AFFF
+}
+
+a:hover {
+  color: #F9B916
+}
+
+.button {
+  background-color: #FF7948;
+  /* background-color: #30AFFF; */
+  height: 35px;
+  width: 200px;
+  border-radius: 5px;
+  font-family: 'Barlow';
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #F9B916
+}
+
+nav {
+  /* background-color: tomato; */
+  border-bottom: 3px solid #30AFFF;
+}
+
+.success-flash {
+  color:#F9B916;
+  border:#F9B916;
+}

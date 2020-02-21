@@ -8,12 +8,14 @@ script:
   - bundle exec rspec
 
 services:
-  - postgresql
+- postgresql
+
 before_install: gem install bundler -v 2.0.2
 
-efore_script:
-  - cp config/database.yml.travis config/database.yml
-  - psql -c 'create database travis_ci_test;' -U postgres
+before_script:
+- cp config/database.yml.travis config/database.yml
+- psql -c 'create database travis_ci_test;' -U postgres
+
 deploy:
   provider: heroku
   api_key:

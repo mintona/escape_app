@@ -101,3 +101,17 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+def stub_omniauth
+  OmniAuth.config.test_mode = true
+
+  OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+    :provider => 'google_oauth2',
+    :info =>   {"name"=>"Alison Minton",
+                "email"=>"alison.minton@gmail.com",
+                "first_name"=>"Alison",
+                "last_name"=>"Minton",
+                "image"=>"https://lh3.googleusercontent.com/a-/AAuE7mCBgq8kmZ4WnKkIrlNB5osGhDM8rkQxeh14ZxoxgA"},
+    :credentials => {token: ENV['GOOGLE_TOKEN_ALI']}
+    })
+end

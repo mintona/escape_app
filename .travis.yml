@@ -4,12 +4,11 @@ before_script:
 
 before_install:
   - gem install bundler
+
 language: ruby
 rvm:
  - 2.6.3
-services:
- - postgresql
-
+ 
  script:
   - bundle install
   - bundle exec rails db:create

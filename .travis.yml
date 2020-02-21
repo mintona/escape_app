@@ -9,3 +9,8 @@ rvm:
  - 2.6.3
 services:
  - postgresql
+
+ script:
+  - bundle install
+  - bundle exec rails db:create
+  - bundle exec raild db:migrate

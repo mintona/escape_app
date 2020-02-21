@@ -1,13 +1,8 @@
+before_script:
+  - psql -c 'create database code_songs_test;' -U postgres
+
 language: ruby
-
 rvm:
-  - 2.6.3
-
-script:
-  - bundle install
-  - bundle exec rails db:create
-  - bundle exec rails db:migrate
-  - bundle exec rspec
-
+ - 2.3.3
 services:
-- postgresql
+ - postgresql

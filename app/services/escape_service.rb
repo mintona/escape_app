@@ -7,11 +7,7 @@ class EscapeService
 
   def get_climb_results(params, location)
     response = climbs_response(params, location)
-    if response.status == 404
-      return response.status
-    else
-      JSON.parse(response.body, symbolize_names: true)[:routes]
-    end
+    JSON.parse(response.body, symbolize_names: true)[:routes]
   end
 
   private

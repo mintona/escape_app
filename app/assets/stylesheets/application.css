@@ -66,3 +66,8 @@ nav {
   color:#F9B916;
   border:#F9B916;
 }
+
+#map {
+ width: 500px;
+ height: 300px;
+}

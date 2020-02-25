@@ -1,7 +1,17 @@
 <center>
   <h1>Hello, <%= current_user.first_name %>!</h1>
-  <h3>Profile Coming Soon</h3>
-  <section>
-    <%= link_to 'Start a New Trip', '/search' %>
+
+  <section class ="trips">
+    <h1>My Trips</h1>
+    <% if current_user.trips.empty? %>
+      <p>You have not added any trips yet.</p>
+    <% else %>
+      <% current_user.trips.each do |trip| %>
+        <section id ="trip-<%= trip.id %>">
+          <%= link_to trip.name, "/trips/#{trip.id}" %>
+        </section>
+      <% end %>
+    <% end %>
+    <%= button_to 'Start a New Trip', '/search', method: :get, class: "button" %>
   </section>
 </center>

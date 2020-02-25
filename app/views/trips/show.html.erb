@@ -1,0 +1,73 @@
+<center>
+
+<h1>Trip Name: <%= @trip.name %></h1>
+<h3><p id ='destination'>Destination: <%= @trip.destination_name %></h3></p>
+<h3><%= @trip.destination_address %></h3>
+</center>
+
+<section class="climbs">
+  <h1>Climbs</h1>
+  <% if !@trip.climbs.empty? %>
+      <% @trip.climbs.each do |climb| %>
+        <section id="climb-<%= climb.id%>">
+          <%= link_to climb.name, climb.url %>
+          <li>Rating: <%= climb.rating %></li>
+          <li>Type: <%= climb.climb_type %></li>
+          <li>Stars: <%= climb.stars %></li>
+        </section>
+      <% end %>
+  <% else %>
+    <p>You have not added any climbs yet.</p>
+  <% end %>
+</section>
+
+<section class="google-map">
+  <div id="map"></div>
+    <script type="text/javascript">
+      function initMap() {
+        var destinationCoords = new google.maps.LatLng(<%= @trip.lat %>, <%= @trip.lng %>);
+
+        var mapOptions = {
+          center: destinationCoords,
+          zoom: 8,
+          disableDefaultUI: true
+        };
+
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        var marker = new google.maps.Marker({
+          position: destinationCoords,
+          map: map,
+          title: "<%= @trip.destination_name %>"
+        });
+
+        <% @trip.climbs.each_with_index do |climb, index| %>
+          climbCoords<%= index %> = new google.maps.LatLng(<%= climb.lat %>, <%= climb.lng %>);
+           var climbMarker<%= index %> = new google.maps.Marker({
+             position: climbCoords<%= index %>,
+             map: map,
+             title: "<%= climb.name%>",
+             icon: { url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"                           }
+                    })
+
+           var infowindow<%= index %> = new google.maps.InfoWindow({
+             content:"<%= climb.name %><br><%= climb.rating %><br>Stars: <%= climb.stars %>"
+           });
+
+           google.maps.event.addListener(climbMarker<%= index %>, 'click', function () {
+             infowindow<%= index %>.open(map, climbMarker<%= index %>);
+           });
+        <% end %>
+
+        var infowindow = new google.maps.InfoWindow({
+          content:"<%= @trip.destination_name %>"
+        });
+
+        google.maps.event.addListener(marker, 'click', function () {
+          infowindow.open(map, marker);
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_MAP_API']%>&callback=initMap"
+    async defer></script>
+</section>

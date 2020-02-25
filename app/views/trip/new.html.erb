@@ -1,0 +1,13 @@
+<h4><%=@location %></h4>
+<h4>Climbing route options for your Trip!</h4>
+<% climb_results.each do |climb| %>
+  <section class="climbs">
+    <h5><%= climb.name %></h5>
+    <p><%= climb.climb_type %></p>
+    <p><%= climb.rating %></p>
+    <p><%= climb.stars %></p>
+    <p><%= climb.pitches %></p>
+    <p><%= climb.location %></p>
+    <p><%= climb.url %></p>
+  </section>
+<% end %>

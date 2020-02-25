@@ -26,8 +26,8 @@ describe "As a logged-in User, after choosing destination and activity" do
 
     click_on "Find Climbs!"
 
-    expect(current_path).to eq("/search/climbs")
-    expect(page).to have_css(".climb")
+    expect(current_path).to eq('/trip/new')
+    expect(page).to have_css(".climbs")
   end
 
   it "displays climbs if no max distance is put in" do
@@ -50,8 +50,8 @@ describe "As a logged-in User, after choosing destination and activity" do
 
     click_on "Find Climbs!"
 
-    expect(current_path).to eq("/search/climbs")
-    expect(page).to have_css(".climb")
+    expect(current_path).to eq('/trip/new')
+    expect(page).to have_css(".climbs")
   end
 
   it "returns error message if distance is not valid" do

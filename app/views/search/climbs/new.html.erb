@@ -2,7 +2,7 @@
 <h1>Destination: <%= @destination.name %></h1>
 <h3><%= @destination.address %></h3>
 
-<%= form_tag( '/search/climbs' , method: :get) do |f| %>
+<%= form_tag( '/trip/new' , method: :get) do |f| %>
   <%= select_tag(:min_diff, options_for_select(climb_diff)) %>
   <br>
   <%= select_tag(:max_diff, options_for_select(climb_diff)) %>

@@ -54,7 +54,7 @@ describe "As a logged-in User, after choosing destination and activity" do
     expect(page).to have_css(".climbs")
   end
 
-  xit "returns error message if distance is not valid" do
+  it "max distance does not allow non-numeric value" do
     WebMock.allow_net_connect!
     user = create(:user)
 
@@ -73,10 +73,7 @@ describe "As a logged-in User, after choosing destination and activity" do
     check('sport')
     fill_in :distance, with: "AA"
 
-    click_on "Find Climbs!"
-
-    expect(current_path).to eq("/search/climbs/new")
-    expect(page).to have_content("Please enter a valid maximum distance.")
+    find_field('distance').should have_content('')
   end
 
   it "returns all climbs if type not selected" do
@@ -111,14 +108,14 @@ describe "As a logged-in User, after choosing destination and activity" do
 
     visit '/search'
 
-    fill_in "destination", with: "Boulder"
+    fill_in "destination", with: "Iowa City"
 
     choose "Climbing"
 
     click_button "Continue"
 
     select "5.6", from: :min_diff
-    select "5.7", from: :max_diff
+    select "5.6", from: :max_diff
     fill_in :distance, with: "10"
 
     click_on "Find Climbs!"

@@ -55,10 +55,51 @@ describe "As a logged-in User, after choosing destination and activity" do
   end
 
   it "returns error message if distance is not valid" do
+    WebMock.allow_net_connect!
+    user = create(:user)
 
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+    visit '/search'
+
+    fill_in "destination", with: "Boulder"
+
+    choose "Climbing"
+
+    click_button "Continue"
+
+    select "5.7", from: :min_diff
+    select "5.12", from: :max_diff
+    check('sport')
+    fill_in :distance, with: "AA"
+
+    click_on "Find Climbs!"
+
+    expect(current_path).to eq("/search/climbs/new")
+    expect(page).to have_content("Please enter a valid maximum distance.")
   end
 
   it "returns error message if type not selected" do
+    WebMock.allow_net_connect!
+    user = create(:user)
 
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+    visit '/search'
+
+    fill_in "destination", with: "Boulder"
+
+    choose "Climbing"
+
+    click_button "Continue"
+
+    select "5.7", from: :min_diff
+    select "5.12", from: :max_diff
+    fill_in :distance, with: "AA"
+
+    click_on "Find Climbs!"
+
+    expect(current_path).to eq("/search/climbs/new")
+    expect(page).to have_content("Please choose a climb type.")
   end
 end

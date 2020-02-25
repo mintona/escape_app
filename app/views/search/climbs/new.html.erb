@@ -7,13 +7,13 @@
   <br>
   <%= select_tag(:max_diff, options_for_select(climb_diff)) %>
   <br>
-  <%= check_box_tag(:trad, "trad") %>
+  <%= check_box_tag(:trad, "Trad") %>
   <%= label_tag(:type, "Trad") %>
-  <%= check_box_tag(:sport, "sport") %>
+  <%= check_box_tag(:sport, "Sport") %>
   <%= label_tag(:type, "Sport") %>
   <br>
   <%= label_tag :distance %>
-  <%= text_field_tag :distance %>
+  <%= number_field_tag :distance %>
   <br>
   <%= submit_tag "Find Climbs!" %>
 <% end %>

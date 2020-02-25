@@ -51,7 +51,7 @@ describe "As a logged-in User, after choosing destination and activity" do
     click_on "Find Climbs!"
 
     expect(current_path).to eq("/search/climbs")
-    expect(page).to have_css(".climb", count: 50)
+    expect(page).to have_css(".climb")
   end
 
   it "returns error message if distance is not valid" do

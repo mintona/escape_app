@@ -13,5 +13,6 @@
     </section>
   <% end %>
 <% else %>
-  <h4>No climbs exist for these parameters.</h4>
+  <h4>No climbs exist for those parameters.</h4>
+  <%= button_to "Try Again", "/search/climbs/new", method: :get %>
 <% end %>

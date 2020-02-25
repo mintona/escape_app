@@ -79,7 +79,7 @@ describe "As a logged-in User, after choosing destination and activity" do
     expect(page).to have_content("Please enter a valid maximum distance.")
   end
 
-  xit "returns error message if type not selected" do
+  it "returns all climbs if type not selected" do
     WebMock.allow_net_connect!
     user = create(:user)
 
@@ -95,12 +95,12 @@ describe "As a logged-in User, after choosing destination and activity" do
 
     select "5.7", from: :min_diff
     select "5.12", from: :max_diff
-    fill_in :distance, with: "AA"
+    fill_in :distance, with: "100"
 
     click_on "Find Climbs!"
 
-    expect(current_path).to eq("/search/climbs/new")
-    expect(page).to have_content("Please choose a climb type.")
+    expect(current_path).to eq("/trip/new")
+    expect(page).to have_css(".climbs")
   end
 
   it "returns message if no climbs exist for those params" do

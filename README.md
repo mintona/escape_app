@@ -34,9 +34,27 @@ API Keys Necessary:
 [Hiking Project API](https://www.hikingproject.com/data)
 
 Gems Used:
-Production: pg, activerecord, sinatra-activerecord, rake, httparty, json, dotenv, fast_jsonapi, pry
+Production:
+* pg
+* activerecord
+* sinatra-activerecord
+* rake
+* httparty
+* json
+* dotenv
+* fast_jsonapi
+* pry
 
-Testing and Development: Pry, rspec, rspec-core, rack-test, capybara, webmock, vcr, shoulda-matchers, database-cleaner-active-record
+Testing and Development:
+* pry
+* rspec
+* rspec-core
+* rack-test
+* capybara
+* webmock
+* vcr
+* shoulda-matchers
+* database-cleaner-active-record
 
 
 **Clone the Rails app** with: `git clone git@github.com:mintona/escape_app.git`
@@ -52,11 +70,20 @@ API Keys Necessary:
 Gems Used:
 
 In Production:
-Faraday
-Figaro
-Omniauth Google OAuth2
+* Faraday
+* Figaro
+* Omniauth Google OAuth2
 
-For Testing and Development: Pry, Capybara, factory_bot_rails, launchy, simplecov, shoulda-matchers, vcr, webmock, database cleaner for active record
+For Testing and Development:
+* Pry
+* Capybara
+* factory_bot_rails
+* launchy
+* simplecov
+* shoulda-matchers
+* vcr
+* webmock
+* database cleaner active record
 
 
 

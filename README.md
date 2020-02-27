@@ -1,6 +1,3 @@
-### README
-
-
 ### About Escape
 
 Escape is an interactive application that allows couples and groups to search for climbing and hiking routes near a destination they are looking to travel to. You start by signing in with Google, then pick a destination and first activity (climbing or hiking), then you are directed to a page where you can pick your activity's preferences, such as climb difficulty, type of climbing you are looking to do (Trad or Sport) and land on a page that includes your Trip's information and interactive map with all the routes you added to this trip.

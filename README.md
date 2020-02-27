@@ -18,7 +18,10 @@ This ten-day group project focused on test-driven and OOP design. It also served
 
 #### Access Locally
 
-**Clone the Sinatra microservice** with: `git clone git@github.com:mintona/escape_microservice.git`
+**Clone the Sinatra microservice** with:
+
+`git clone git@github.com:mintona/escape_microservice.git`
+
 `cd escape-microservice`
 
 `bundle install`
@@ -67,7 +70,11 @@ Testing and Development:
 
 
 
-**Clone the Rails app** with: `git clone git@github.com:mintona/escape_app.git`
+**Clone the Rails app** with:
+
+`git clone git@github.com:mintona/escape_app.git`
+
+`cd escape-app`
 
 `bundle install`
 

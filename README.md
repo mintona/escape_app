@@ -2,8 +2,6 @@
 
 Take a look at Escape's production page at [escape-app](https://escape-app.herokuapp.com/)!
 
-<a href="https://escape-app.herokuapp.com/" target="_blank_">escape-app</a>
-
 
 ### About Escape
 

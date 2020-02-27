@@ -40,7 +40,8 @@ API Keys Necessary:
 
 [Hiking Project API](https://www.hikingproject.com/data)
 
-Gems Used:
+*Gems Used:*
+
 Production:
 * sinatra
 * pg
@@ -65,17 +66,22 @@ Testing and Development:
 * database-cleaner-active-record
 
 
+
 **Clone the Rails app** with: `git clone git@github.com:mintona/escape_app.git`
-Install Rails 6.0.2.1
+
 `bundle install`
+
 `rake db:setup`
+
 Seeds are provided, but you can also create your own!
 
 API Keys Necessary:
+
 [Google Client Id and Google Client Secret](https://console.developers.google.com/cloud-resource-manager)
+
 [Google Maps API](https://developers.google.com/maps/documentation/javascript/get-api-key)
 
-Gems Used:
+*Gems Used:*
 
 In Production:
 * Faraday
@@ -94,28 +100,12 @@ For Testing and Development:
 * database cleaner active record
 
 
-
-
-
-### Requirements for running the app
-### Database and Schema design
-### Testing
 ### Versions
 - Ruby 2.6.3
 - Rails 6.0.2.1
 
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+### Database and Schema design
 
 
-* System dependencies
-* Configuration
-* Database creation
-* Database initialization
-* How to run the test suite
-* Services (job queues, cache servers, search engines, etc.)
-* Deployment instructions
+### Testing

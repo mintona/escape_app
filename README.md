@@ -115,5 +115,7 @@ For Testing and Development:
 
 ### Database and Schema design
 
+![Schema Description](/Users/madelynromero/turing/mod3/projects/escape/escape_app/app/assets/images/schema_design/Screen Shot 2020-02-27 at 1.02.31 PM.png)
+
 
 ### Testing

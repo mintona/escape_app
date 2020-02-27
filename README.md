@@ -19,11 +19,11 @@ This ten-day group project focused on test-driven and OOP design. It also served
 #### Access Locally
 
 **Clone the Sinatra microservice** with: `git clone git@github.com:mintona/escape_microservice.git`
-Install Ruby 2.6.3
-`gem install sinatra`
-# ASK RYAN RE SET UP SINATRA
+`cd escape-microservice`
+`bundle install`
 
 
+`rake db:create`
 
 API Keys Necessary:
 
@@ -35,6 +35,7 @@ API Keys Necessary:
 
 Gems Used:
 Production:
+* sinatra
 * pg
 * activerecord
 * sinatra-activerecord

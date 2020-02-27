@@ -16,6 +16,35 @@ This ten-day group project focused on test-driven and OOP design. It also served
 
 ### Installation
 
+#### Access Locally
+
+**Clone the Sinatra microservice** with: `git clone git@github.com:mintona/escape_microservice.git`
+Install Ruby 2.6.3
+`gem install sinatra`
+
+API Keys Necessary:
+
+[Google Places API](https://developers.google.com/places/web-service/intro)
+
+[Mountain Project API](https://www.mountainproject.com/data)
+
+[Hiking Project API](https://www.hikingproject.com/data)
+
+**Clone the Rails app** with: `git clone git@github.com:mintona/escape_app.git`
+Install Rails 6.0.2.1
+`bundle install`
+Seeds are provided, but you can also create your own.
+
+API Keys Necessary:
+[Google Client Id and Google Client Secret](https://console.developers.google.com/cloud-resource-manager)
+[Google Maps API](https://developers.google.com/maps/documentation/javascript/get-api-key)
+
+
+Gems Used:
+
+
+
+
 
 ### Requirements for running the app
 ### Database and Schema design

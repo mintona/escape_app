@@ -21,6 +21,9 @@ This ten-day group project focused on test-driven and OOP design. It also served
 **Clone the Sinatra microservice** with: `git clone git@github.com:mintona/escape_microservice.git`
 Install Ruby 2.6.3
 `gem install sinatra`
+# ASK RYAN RE SET UP SINATRA
+
+
 
 API Keys Necessary:
 
@@ -30,17 +33,30 @@ API Keys Necessary:
 
 [Hiking Project API](https://www.hikingproject.com/data)
 
+Gems Used:
+Production: pg, activerecord, sinatra-activerecord, rake, httparty, json, dotenv, fast_jsonapi, pry
+
+Testing and Development: Pry, rspec, rspec-core, rack-test, capybara, webmock, vcr, shoulda-matchers, database-cleaner-active-record
+
+
 **Clone the Rails app** with: `git clone git@github.com:mintona/escape_app.git`
 Install Rails 6.0.2.1
 `bundle install`
-Seeds are provided, but you can also create your own.
+`rake db:setup`
+Seeds are provided, but you can also create your own!
 
 API Keys Necessary:
 [Google Client Id and Google Client Secret](https://console.developers.google.com/cloud-resource-manager)
 [Google Maps API](https://developers.google.com/maps/documentation/javascript/get-api-key)
 
-
 Gems Used:
+
+In Production:
+Faraday
+Figaro
+Omniauth Google OAuth2
+
+For Testing and Development: Pry, Capybara, factory_bot_rails, launchy, simplecov, shoulda-matchers, vcr, webmock, database cleaner for active record
 
 
 

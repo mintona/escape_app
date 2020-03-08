@@ -1,13 +1,13 @@
 <div class="search-forms">
   <%= form_tag(path , method: :get) do |f| %>
     <%= label_tag :min_stars, 'Minimum star rating:' %> <br>
-    <%= number_field_tag :min_stars, nil, min: 0, max: 5  %>
+    <%= number_field_tag :min_stars, nil, placeholder: '0 - 5', min: 0, max: 5  %>
     <br>
     <%= label_tag :max_results, 'Maximum number of hikes returned:' %> <br>
-    <%= number_field_tag :max_results, nil, min: 0, max: 50 %>
+    <%= number_field_tag :max_results, nil, placeholder: '0 - 50', min: 0, max: 50 %>
     <br>
     <%= label_tag :distance, "How far are you willing to travel from your destination?" %> <br>
-    <%= number_field_tag :distance, nil, min: 0, max: 200 %>
+    <%= number_field_tag :distance, nil, placeholder: '0 - 200', min: 0, max: 200 %>
     <p>(miles)</p>
     <%= submit_tag "Find Hikes!", class: "button" %>
   <% end %>

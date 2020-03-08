@@ -11,4 +11,11 @@ RSpec.describe 'As a visitor' do
       expect(page).to have_link('About')
     end
   end
+
+  it 'I can visit the about page, then click Log In to return to the root page' do
+    visit '/about'
+    expect(current_path).to eq('/about')
+    click_on 'Log In'
+    expect(current_path).to eq('/')
+  end
 end

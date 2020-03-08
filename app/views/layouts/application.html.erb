@@ -22,6 +22,7 @@
           </div>
           <div class="col-md" id="nav-links">
             <%= link_to 'About', '/about' %>
+            <%= link_to 'Log In', '/' unless current_user %>
             <%= link_to 'New Trip', '/search' if current_user %>
             <%= link_to 'My Trips', '/profile' if current_user %>
             <%= link_to 'Log Out', '/logout' if current_user %>

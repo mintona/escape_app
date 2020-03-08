@@ -11,7 +11,7 @@ class Climbs::TripsController < ApplicationController
       flash[:error] = "Please ensure your minimium difficulty is less than your maximum difficulty in your selection preferences and you have a distance of at least 1 mile"
       redirect_to '/search/climbs/new'
     elsif params["distance"].to_i <= 0
-      flash[:error] = "Please fill in a distance of atleast 1 and try your search again"
+      flash[:error] = "Please fill in a distance of at least 1 and try your search again"
       redirect_to '/search/climbs/new'
     elsif min_diff > max_diff
       flash[:error] = "Please ensure your minimium difficulty is less than your maximum difficulty in your selection preferences"

@@ -57,7 +57,7 @@ describe "As a logged-in User, after choosing destination and activity" do
       click_on "Find Climbs!"
 
       expect(current_path).to eq('/search/climbs/new')
-      expect(page).to have_content("Please fill in a distance of atleast 1 and try your search again")
+      expect(page).to have_content("Please fill in a distance of at least 1 and try your search again")
     end 
   end
     describe "if both distance and difficulty are entered incorrectly" do

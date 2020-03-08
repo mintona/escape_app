@@ -11,7 +11,7 @@
     <%= label_tag(:type, "Sport") %>
     <br>
     <%= label_tag :distance, "How far are you willing to travel from your destination?" %> <br>
-    <%= text_field_tag :distance %>
+    <%= number_field_tag :distance, nil, placeholder: '1 - 200', in: 1...201  %>
     <br>
     <p>(miles)</p>
     <%= submit_tag "Find Climbs!", class: "button" %> 

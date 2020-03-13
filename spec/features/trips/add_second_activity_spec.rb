@@ -3,8 +3,6 @@ require 'rails_helper'
 RSpec.describe 'As a logged in user' do
   describe 'I can have both activities on my trip' do
     describe 'if I have created a trip that has climbs' do
-
-
       it 'I can add hikes to my trip', js: true do
         VCR.turn_off! :ignore_cassettes => true
         WebMock.allow_net_connect!

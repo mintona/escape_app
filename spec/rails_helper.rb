@@ -125,3 +125,13 @@ VCR.configure do |config|
   config.filter_sensitive_data('<GOOGLE_CLIENT_SECRET>') { ENV['GOOGLE_CLIENT_SECRET'] }
   config.configure_rspec_metadata!
 end
+
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
+end
+
+# Capybara.javascript_driver = :selenium_chrome
+
+Capybara.configure do |config|
+  config.default_max_wait_time = 5
+end

@@ -17,8 +17,14 @@ class HikesFacade
   end
 
   def hike_results
+    @hike_results ||= get_hike_results
+  end
+
+  private
+
+  def get_hike_results
     all_hikes = EscapeService.new.get_hike_results(@search_params, @destination.lat, @destination.lng)
-    @hike_options = all_hikes.map do |hike_response|
+    hike_results = all_hikes.map do |hike_response|
       HikeOption.new(hike_response)
     end
   end

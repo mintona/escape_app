@@ -1,0 +1,2767 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/url
+    body:
+      encoding: UTF-8
+      string: '{"url":"http://127.0.0.1:52639/search"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '39'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:18 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"./descendant::*[self::input | self::textarea][not(((((((./@type
+        = ''submit'') or (./@type = ''image'')) or (./@type = ''radio'')) or (./@type
+        = ''checkbox'')) or (./@type = ''hidden'')) or (./@type = ''file'')))][((((./@id
+        = ''destination'') or (./@name = ''destination'')) or (./@placeholder = ''destination''))
+        or (./@id = //label[(normalize-space(string(.)) = ''destination'')]/@for))]
+        | .//label[(normalize-space(string(.)) = ''destination'')]//./descendant::*[self::input
+        | self::textarea][not(((((((./@type = ''submit'') or (./@type = ''image''))
+        or (./@type = ''radio'')) or (./@type = ''checkbox'')) or (./@type = ''hidden''))
+        or (./@type = ''file'')))]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '655'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"6caa1f1a-9039-4539-940b-6fabcd8c1a9f"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:18 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"6caa1f1a-9039-4539-940b-6fabcd8c1a9f"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:18 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"6caa1f1a-9039-4539-940b-6fabcd8c1a9f"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:18 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"6caa1f1a-9039-4539-940b-6fabcd8c1a9f"},["tagName","type"]]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '247'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '26'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":["INPUT","text"]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:18 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].select()","args":[{"element-6066-11e4-a52e-4f735466cecf":"6caa1f1a-9039-4539-940b-6fabcd8c1a9f"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '122'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:18 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/element/6caa1f1a-9039-4539-940b-6fabcd8c1a9f/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["B","o","u","l","d","e","r"],"text":"Boulder"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '56'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:18 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"./descendant::input[(./@type = ''radio'')][((((./@id
+        = ''Climbing'') or (./@name = ''Climbing'')) or (./@placeholder = ''Climbing''))
+        or (./@id = //label[(normalize-space(string(.)) = ''Climbing'')]/@for))] |
+        .//label[(normalize-space(string(.)) = ''Climbing'')]//./descendant::input[(./@type
+        = ''radio'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '320'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"8da0de6c-7315-4b09-b5d2-536151e9da71"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:18 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"8da0de6c-7315-4b09-b5d2-536151e9da71"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:18 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"8da0de6c-7315-4b09-b5d2-536151e9da71"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:18 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"8da0de6c-7315-4b09-b5d2-536151e9da71"},["tagName","type"]]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '247'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '27'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":["INPUT","radio"]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:18 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/element/8da0de6c-7315-4b09-b5d2-536151e9da71/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:18 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//a[./@href][((((./@id = ''Continue'') or
+        (normalize-space(string(.)) = ''Continue'')) or (./@title = ''Continue''))
+        or .//img[(./@alt = ''Continue'')])] | .//input[((((./@type = ''submit'')
+        or (./@type = ''reset'')) or (./@type = ''image'')) or (./@type = ''button''))][((((./@id
+        = ''Continue'') or (./@name = ''Continue'')) or (./@value = ''Continue''))
+        or (./@title = ''Continue''))] | .//input[(./@type = ''image'')][(./@alt =
+        ''Continue'')] | .//button[((((((./@id = ''Continue'') or (./@name = ''Continue''))
+        or (./@value = ''Continue'')) or (./@title = ''Continue'')) or (normalize-space(string(.))
+        = ''Continue'')) or .//img[(./@alt = ''Continue'')])] | .//input[(./@type
+        = ''image'')][(./@alt = ''Continue'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '703'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"5c503ff8-ff22-4949-a47d-3339e577a506"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:18 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"5c503ff8-ff22-4949-a47d-3339e577a506"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:18 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"5c503ff8-ff22-4949-a47d-3339e577a506"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:18 GMT
+- request:
+    method: get
+    uri: https://escape-app-api.herokuapp.com/api/v1/destination/Boulder
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '154'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.5.7/2019-10-01)
+      Date:
+      - Fri, 13 Mar 2020 22:09:19 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"16","type":"destination","attributes":{"name":"Boulder","full_address":"Boulder,
+        CO, USA","longitude":-105.2705456,"latitude":40.0149856}}}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/element/5c503ff8-ff22-4949-a47d-3339e577a506/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//select[((((./@id = ''min_diff'') or (./@name
+        = ''min_diff'')) or (./@placeholder = ''min_diff'')) or (./@id = //label[(normalize-space(string(.))
+        = ''min_diff'')]/@for))] | .//label[(normalize-space(string(.)) = ''min_diff'')]//.//select"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '258'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"b88ce1e0-459f-41ce-87b4-988d460841e4"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"b88ce1e0-459f-41ce-87b4-988d460841e4"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"b88ce1e0-459f-41ce-87b4-988d460841e4"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/element/b88ce1e0-459f-41ce-87b4-988d460841e4/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '18'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"select"}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/element/b88ce1e0-459f-41ce-87b4-988d460841e4/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//option[(normalize-space(string(.)) = ''5.7'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '75'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"a5d39175-2b34-42f1-b525-a4055e1ec7e2"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"a5d39175-2b34-42f1-b525-a4055e1ec7e2"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *, :checked'')\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"a5d39175-2b34-42f1-b525-a4055e1ec7e2"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '172'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/element/a5d39175-2b34-42f1-b525-a4055e1ec7e2/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//select[((((./@id = ''max_diff'') or (./@name
+        = ''max_diff'')) or (./@placeholder = ''max_diff'')) or (./@id = //label[(normalize-space(string(.))
+        = ''max_diff'')]/@for))] | .//label[(normalize-space(string(.)) = ''max_diff'')]//.//select"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '258'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"26228a7e-e4aa-48ac-872e-d442c4f3bc6b"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"26228a7e-e4aa-48ac-872e-d442c4f3bc6b"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"26228a7e-e4aa-48ac-872e-d442c4f3bc6b"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/element/26228a7e-e4aa-48ac-872e-d442c4f3bc6b/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '18'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"select"}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/element/26228a7e-e4aa-48ac-872e-d442c4f3bc6b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//option[(normalize-space(string(.)) = ''5.12'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '76'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"bc13e888-f38b-43fe-84da-37db95a78320"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"bc13e888-f38b-43fe-84da-37db95a78320"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *, :checked'')\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"bc13e888-f38b-43fe-84da-37db95a78320"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '172'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/element/bc13e888-f38b-43fe-84da-37db95a78320/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"./descendant::input[(./@type = ''checkbox'')][((((./@id
+        = ''sport'') or (./@name = ''sport'')) or (./@placeholder = ''sport'')) or
+        (./@id = //label[(normalize-space(string(.)) = ''sport'')]/@for))] | .//label[(normalize-space(string(.))
+        = ''sport'')]//./descendant::input[(./@type = ''checkbox'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '311'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"b46cd083-0a82-448c-8b46-88ff633c813f"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"b46cd083-0a82-448c-8b46-88ff633c813f"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"b46cd083-0a82-448c-8b46-88ff633c813f"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"b46cd083-0a82-448c-8b46-88ff633c813f"},["tagName","type"]]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '247'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '30'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":["INPUT","checkbox"]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/element/b46cd083-0a82-448c-8b46-88ff633c813f/selected
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/element/b46cd083-0a82-448c-8b46-88ff633c813f/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"./descendant::*[self::input | self::textarea][not(((((((./@type
+        = ''submit'') or (./@type = ''image'')) or (./@type = ''radio'')) or (./@type
+        = ''checkbox'')) or (./@type = ''hidden'')) or (./@type = ''file'')))][((((./@id
+        = ''distance'') or (./@name = ''distance'')) or (./@placeholder = ''distance''))
+        or (./@id = //label[(normalize-space(string(.)) = ''distance'')]/@for))] |
+        .//label[(normalize-space(string(.)) = ''distance'')]//./descendant::*[self::input
+        | self::textarea][not(((((((./@type = ''submit'') or (./@type = ''image''))
+        or (./@type = ''radio'')) or (./@type = ''checkbox'')) or (./@type = ''hidden''))
+        or (./@type = ''file'')))]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '640'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"33788f13-ab93-4024-9c2a-6ac9e4eb9688"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"33788f13-ab93-4024-9c2a-6ac9e4eb9688"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"33788f13-ab93-4024-9c2a-6ac9e4eb9688"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"33788f13-ab93-4024-9c2a-6ac9e4eb9688"},["tagName","type"]]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '247'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '28'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":["INPUT","number"]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].select()","args":[{"element-6066-11e4-a52e-4f735466cecf":"33788f13-ab93-4024-9c2a-6ac9e4eb9688"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '122'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/element/33788f13-ab93-4024-9c2a-6ac9e4eb9688/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["1","0"],"text":"10"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '31'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//a[./@href][((((./@id = ''Find Climbs!'')
+        or (normalize-space(string(.)) = ''Find Climbs!'')) or (./@title = ''Find
+        Climbs!'')) or .//img[(./@alt = ''Find Climbs!'')])] | .//input[((((./@type
+        = ''submit'') or (./@type = ''reset'')) or (./@type = ''image'')) or (./@type
+        = ''button''))][((((./@id = ''Find Climbs!'') or (./@name = ''Find Climbs!''))
+        or (./@value = ''Find Climbs!'')) or (./@title = ''Find Climbs!''))] | .//input[(./@type
+        = ''image'')][(./@alt = ''Find Climbs!'')] | .//button[((((((./@id = ''Find
+        Climbs!'') or (./@name = ''Find Climbs!'')) or (./@value = ''Find Climbs!''))
+        or (./@title = ''Find Climbs!'')) or (normalize-space(string(.)) = ''Find
+        Climbs!'')) or .//img[(./@alt = ''Find Climbs!'')])] | .//input[(./@type =
+        ''image'')][(./@alt = ''Find Climbs!'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '767'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"15c8f36a-6dec-4b91-a59c-0a9da16c6a14"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"15c8f36a-6dec-4b91-a59c-0a9da16c6a14"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"15c8f36a-6dec-4b91-a59c-0a9da16c6a14"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:19 GMT
+- request:
+    method: get
+    uri: https://escape-app-api.herokuapp.com/api/v1/climb_results?lat=40.0149856&lon=-105.2705456&max_diff=5.12&max_dist=10&min_diff=5.7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '32523'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.5.7/2019-10-01)
+      Date:
+      - Fri, 13 Mar 2020 22:09:19 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"routes":[{"id":105748786,"name":"The Naked Edge","type":"Trad","rating":"5.11b","stars":4.9,"starVotes":319,"pitches":6,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - Tower Two"],"url":"https://www.mountainproject.com/route/105748786/the-naked-edge","imgSqSmall":"https://cdn-files.apstatic.com/climb/110822565_sqsmall_1494354956.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/110822565_small_1494354956.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/110822565_smallMed_1494354956.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/110822565_medium_1494354956.jpg","longitude":-105.2852,"latitude":39.9312},{"id":105750106,"name":"Rewritten","type":"Trad","rating":"5.7","stars":4.7,"starVotes":1240,"pitches":6,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - Lumpe to the top"],"url":"https://www.mountainproject.com/route/105750106/rewritten","imgSqSmall":"https://cdn-files.apstatic.com/climb/113171856_sqsmall_1497744179.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/113171856_small_1497744179.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/113171856_smallMed_1497744179.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/113171856_medium_1497744179.jpg","longitude":-105.2868,"latitude":39.9325},{"id":105748490,"name":"The
+        Bastille Crack","type":"Trad","rating":"5.7","stars":4.5,"starVotes":1721,"pitches":5,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","The Bastille","The Bastille - N Face"],"url":"https://www.mountainproject.com/route/105748490/the-bastille-crack","imgSqSmall":"https://cdn-files.apstatic.com/climb/1202231_sqsmall_1557525516.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/1202231_small_1557525516.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/1202231_smallMed_1557525516.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/1202231_medium_1557525516.jpg","longitude":-105.2832,"latitude":39.9308},{"id":105748612,"name":"Outer
+        Space","type":"Trad","rating":"5.10b/c R","stars":4.9,"starVotes":516,"pitches":2,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","The Bastille","The Bastille - N Face"],"url":"https://www.mountainproject.com/route/105748612/outer-space","imgSqSmall":"https://cdn-files.apstatic.com/climb/109110646_sqsmall_1494338979.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/109110646_small_1494338979.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/109110646_smallMed_1494338979.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/109110646_medium_1494338979.jpg","longitude":-105.283,"latitude":39.9307},{"id":105750424,"name":"Death
+        and Transfiguration","type":"Trad","rating":"5.11b","stars":5,"starVotes":88,"pitches":1,"location":["Colorado","Boulder","Flatirons","North","Green
+        Mountain Pinnacle"],"url":"https://www.mountainproject.com/route/105750424/death-and-transfiguration","imgSqSmall":"https://cdn-files.apstatic.com/climb/107332316_sqsmall_1494182193.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/107332316_small_1494182193.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/107332316_smallMed_1494182193.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/107332316_medium_1494182193.jpg","longitude":-105.2944,"latitude":39.9834},{"id":105753319,"name":"Doub-Griffith","type":"Trad","rating":"5.11c","stars":4.9,"starVotes":89,"pitches":3,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - Tower One"],"url":"https://www.mountainproject.com/route/105753319/doub-griffith","imgSqSmall":"https://cdn-files.apstatic.com/climb/111194677_sqsmall_1494342641.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/111194677_small_1494342641.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/111194677_smallMed_1494342641.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/111194677_medium_1494342641.jpg","longitude":-105.286,"latitude":39.9319},{"id":105749728,"name":"Super
+        Slab","type":"Trad","rating":"5.10+","stars":4.8,"starVotes":175,"pitches":4,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - Tower One"],"url":"https://www.mountainproject.com/route/105749728/super-slab","imgSqSmall":"https://cdn-files.apstatic.com/climb/1206498_sqsmall_1557849673.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/1206498_small_1557849673.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/1206498_smallMed_1557849673.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/1206498_medium_1557849673.jpg","longitude":-105.286,"latitude":39.9319},{"id":105748777,"name":"Rosy
+        Crucifixion","type":"Trad","rating":"5.10a/b PG13","stars":4.8,"starVotes":390,"pitches":3,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - Tower Two"],"url":"https://www.mountainproject.com/route/105748777/rosy-crucifixion","imgSqSmall":"https://cdn-files.apstatic.com/climb/108271333_sqsmall_1494273144.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/108271333_small_1494273144.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/108271333_smallMed_1494273144.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/108271333_medium_1494273144.jpg","longitude":-105.2852,"latitude":39.9312},{"id":105748771,"name":"Vertigo","type":"Trad","rating":"5.11b","stars":4.8,"starVotes":276,"pitches":4,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - Tower One"],"url":"https://www.mountainproject.com/route/105748771/vertigo","imgSqSmall":"https://cdn-files.apstatic.com/climb/107961233_sqsmall_1494253759.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/107961233_small_1494253759.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/107961233_smallMed_1494253759.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/107961233_medium_1494253759.jpg","longitude":-105.286,"latitude":39.9319},{"id":106207686,"name":"The
+        Shaft","type":"Sport, TR","rating":"5.12b","stars":4.8,"starVotes":175,"pitches":1,"location":["Colorado","Boulder","Flatirons","Central","Dinosaur
+        Rock"],"url":"https://www.mountainproject.com/route/106207686/the-shaft","imgSqSmall":"https://cdn-files.apstatic.com/climb/107165108_sqsmall_1494170577.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/107165108_small_1494170577.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/107165108_smallMed_1494170577.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/107165108_medium_1494170577.jpg","longitude":-105.2875,"latitude":39.9734},{"id":108095626,"name":"Rebuffat''s
+        Arete","type":"Trad","rating":"5.7","stars":4.8,"starVotes":399,"pitches":1,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - Lumpe to the top"],"url":"https://www.mountainproject.com/route/108095626/rebuffats-arete","imgSqSmall":"https://cdn-files.apstatic.com/climb/117244156_sqsmall_1561133998.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/117244156_small_1561133998.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/117244156_smallMed_1561133998.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/117244156_medium_1561133998.jpg","longitude":-105.2867,"latitude":39.9323},{"id":105749575,"name":"Plan
+        B","type":"Sport","rating":"5.12b","stars":4.8,"starVotes":113,"pitches":1,"location":["Colorado","Boulder","Boulder
+        Canyon","Security Risk Massif","Upper Security Risk"],"url":"https://www.mountainproject.com/route/105749575/plan-b","imgSqSmall":"https://cdn-files.apstatic.com/climb/1204208_sqsmall_1557527357.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/1204208_small_1557527357.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/1204208_smallMed_1557527357.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/1204208_medium_1557527357.jpg","longitude":-105.3931,"latitude":40.0048},{"id":105751744,"name":"Captain
+        Beyond","type":"Trad","rating":"5.10+","stars":4.8,"starVotes":96,"pitches":5,"location":["Colorado","Boulder","Eldorado
+        Mountain","Mickey Mouse Wall"],"url":"https://www.mountainproject.com/route/105751744/captain-beyond","imgSqSmall":"https://cdn-files.apstatic.com/climb/1203412_sqsmall_1557526601.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/1203412_small_1557526601.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/1203412_smallMed_1557526601.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/1203412_medium_1557526601.jpg","longitude":-105.2853,"latitude":39.9198},{"id":105750400,"name":"Center
+        Route","type":"Trad","rating":"5.11a/b","stars":4.8,"starVotes":205,"pitches":3,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Rincon","Rincon - Center Route \u0026 R"],"url":"https://www.mountainproject.com/route/105750400/center-route","imgSqSmall":"https://cdn-files.apstatic.com/climb/106303208_sqsmall_1494095912.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/106303208_small_1494095912.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/106303208_smallMed_1494095912.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/106303208_medium_1494095912.jpg","longitude":-105.2894,"latitude":39.9342},{"id":105753505,"name":"Animal
+        Magnetism","type":"Sport","rating":"5.11c","stars":4.8,"starVotes":283,"pitches":1,"location":["Colorado","Boulder","Boulder
+        Canyon","Animal World","Upper Animal World"],"url":"https://www.mountainproject.com/route/105753505/animal-magnetism","imgSqSmall":"https://cdn-files.apstatic.com/climb/114000518_sqsmall_1515530659.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/114000518_small_1515530659.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/114000518_smallMed_1515530659.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/114000518_medium_1515530659.jpg","longitude":-105.4151,"latitude":39.9983},{"id":105756796,"name":"Over
+        the Hill","type":"Trad","rating":"5.10b","stars":4.7,"starVotes":378,"pitches":2,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Rincon","Rincon - L of Center Route"],"url":"https://www.mountainproject.com/route/105756796/over-the-hill","imgSqSmall":"https://cdn-files.apstatic.com/climb/1201436_sqsmall_1557524924.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/1201436_small_1557524924.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/1201436_smallMed_1557524924.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/1201436_medium_1557524924.jpg","longitude":-105.2899,"latitude":39.9344},{"id":105749599,"name":"Handcracker
+        Direct","type":"Trad","rating":"5.10a","stars":4.6,"starVotes":494,"pitches":5,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","The West Ridge","West Ridge - part C - Pony Express to Long John"],"url":"https://www.mountainproject.com/route/105749599/handcracker-direct","imgSqSmall":"https://cdn-files.apstatic.com/climb/108599432_sqsmall_1494290177.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/108599432_small_1494290177.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/108599432_smallMed_1494290177.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/108599432_medium_1494290177.jpg","longitude":-105.2883,"latitude":39.932},{"id":105752323,"name":"Undertow","type":"Sport","rating":"5.12b","stars":4.7,"starVotes":145,"pitches":1,"location":["Colorado","Boulder","Flatirons","South","The
+        Slab"],"url":"https://www.mountainproject.com/route/105752323/undertow","imgSqSmall":"https://cdn-files.apstatic.com/climb/107175159_sqsmall_1494171264.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/107175159_small_1494171264.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/107175159_smallMed_1494171264.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/107175159_medium_1494171264.jpg","longitude":-105.287,"latitude":39.9629},{"id":105751960,"name":"Gambit","type":"Trad","rating":"5.8","stars":4.6,"starVotes":547,"pitches":5,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Shirt Tail Peak"],"url":"https://www.mountainproject.com/route/105751960/gambit","imgSqSmall":"https://cdn-files.apstatic.com/climb/106602420_sqsmall_1494124248.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/106602420_small_1494124248.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/106602420_smallMed_1494124248.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/106602420_medium_1494124248.jpg","longitude":-105.2889,"latitude":39.9341},{"id":105753106,"name":"Climb
+        Of The Century","type":"Trad","rating":"5.11","stars":4.7,"starVotes":113,"pitches":1,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Rincon","Rincon - L of Center Route"],"url":"https://www.mountainproject.com/route/105753106/climb-of-the-century","imgSqSmall":"https://cdn-files.apstatic.com/climb/106462646_sqsmall_1494111166.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/106462646_small_1494111166.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/106462646_smallMed_1494111166.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/106462646_medium_1494111166.jpg","longitude":-105.2899,"latitude":39.9344},{"id":105748813,"name":"Grandmother''s
+        Challenge","type":"Trad","rating":"5.10c","stars":4.6,"starVotes":271,"pitches":2,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - Lumpe to the top"],"url":"https://www.mountainproject.com/route/105748813/grandmothers-challenge","imgSqSmall":"https://cdn-files.apstatic.com/climb/1301453_sqsmall_1557850461.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/1301453_small_1557850461.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/1301453_smallMed_1557850461.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/1301453_medium_1557850461.jpg","longitude":-105.2867,"latitude":39.9323},{"id":105750457,"name":"Cosmosis","type":"Trad","rating":"5.10a","stars":4.6,"starVotes":249,"pitches":2,"location":["Colorado","Boulder","Boulder
+        Canyon","Bell Buttress Massif","Bell Buttress - Main Crag"],"url":"https://www.mountainproject.com/route/105750457/cosmosis","imgSqSmall":"https://cdn-files.apstatic.com/climb/114266043_sqsmall_1523878109.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/114266043_small_1523878109.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/114266043_smallMed_1523878109.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/114266043_medium_1523878109.jpg","longitude":-105.413,"latitude":40.0011},{"id":105748645,"name":"The
+        Green Spur","type":"Trad","rating":"5.9+","stars":4.5,"starVotes":486,"pitches":2,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - Lumpe to the top"],"url":"https://www.mountainproject.com/route/105748645/the-green-spur","imgSqSmall":"https://cdn-files.apstatic.com/climb/1203187_sqsmall_1557526346.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/1203187_small_1557526346.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/1203187_smallMed_1557526346.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/1203187_medium_1557526346.jpg","longitude":-105.2867,"latitude":39.9323},{"id":105750565,"name":"Darkness
+        ''til Dawn","type":"Trad","rating":"5.10a","stars":4.6,"starVotes":351,"pitches":1,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - Lumpe to the top"],"url":"https://www.mountainproject.com/route/105750565/darkness-til-dawn","imgSqSmall":"https://cdn-files.apstatic.com/climb/1201232_sqsmall_1557524786.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/1201232_small_1557524786.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/1201232_smallMed_1557524786.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/1201232_medium_1557524786.jpg","longitude":-105.2867,"latitude":39.9323},{"id":105764211,"name":"The
+        Metamorphosis","type":"Trad","rating":"5.10-","stars":4.6,"starVotes":139,"pitches":1,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","The Wind Tower","Wind Tower - S Face"],"url":"https://www.mountainproject.com/route/105764211/the-metamorphosis","imgSqSmall":"https://cdn-files.apstatic.com/climb/112803160_sqsmall_1494315992.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/112803160_small_1494315992.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/112803160_smallMed_1494315992.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/112803160_medium_1494315992.jpg","longitude":-105.283,"latitude":39.9314},{"id":105762483,"name":"Alice
+        in Bucketland","type":"Trad","rating":"5.8+ R","stars":4.6,"starVotes":179,"pitches":2,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - Tower One"],"url":"https://www.mountainproject.com/route/105762483/alice-in-bucketland","imgSqSmall":"https://cdn-files.apstatic.com/climb/106354949_sqsmall_1494100995.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/106354949_small_1494100995.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/106354949_smallMed_1494100995.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/106354949_medium_1494100995.jpg","longitude":-105.286,"latitude":39.9319},{"id":105753004,"name":"East
+        Ridge","type":"Trad","rating":"5.10c","stars":4.6,"starVotes":106,"pitches":5,"location":["Colorado","Boulder","Flatirons","South","The
+        Maiden"],"url":"https://www.mountainproject.com/route/105753004/east-ridge","imgSqSmall":"https://cdn-files.apstatic.com/climb/1201310_sqsmall_1557524845.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/1201310_small_1557524845.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/1201310_smallMed_1557524845.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/1201310_medium_1557524845.jpg","longitude":-105.2872,"latitude":39.95},{"id":105748627,"name":"Hair
+        City","type":"Trad","rating":"5.9+ R","stars":4.6,"starVotes":394,"pitches":3,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","The Bastille","The Bastille - W Face"],"url":"https://www.mountainproject.com/route/105748627/hair-city","imgSqSmall":"https://cdn-files.apstatic.com/climb/1203651_sqsmall_1557526857.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/1203651_small_1557526857.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/1203651_smallMed_1557526857.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/1203651_medium_1557526857.jpg","longitude":-105.283,"latitude":39.9304},{"id":105748639,"name":"Blind
+        Faith","type":"Trad","rating":"5.10a","stars":4.5,"starVotes":641,"pitches":2,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","The Bastille","The Bastille - W Face"],"url":"https://www.mountainproject.com/route/105748639/blind-faith","imgSqSmall":"https://cdn-files.apstatic.com/climb/106416404_sqsmall_1494106828.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/106416404_small_1494106828.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/106416404_smallMed_1494106828.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/106416404_medium_1494106828.jpg","longitude":-105.283,"latitude":39.9304},{"id":105749425,"name":"Disappearing
+        Act (aka Kryptonite)","type":"Trad","rating":"5.11a","stars":4.6,"starVotes":100,"pitches":2,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - Lumpe to the top"],"url":"https://www.mountainproject.com/route/105749425/disappearing-act-aka-kryptonite","imgSqSmall":"https://cdn-files.apstatic.com/climb/1205488_sqsmall_1557848585.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/1205488_small_1557848585.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/1205488_smallMed_1557848585.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/1205488_medium_1557848585.jpg","longitude":-105.2867,"latitude":39.9323},{"id":105754969,"name":"Aerial
+        Book","type":"Trad, TR","rating":"5.11a PG13","stars":4.6,"starVotes":88,"pitches":2,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Rincon","Rincon - L of Center Route"],"url":"https://www.mountainproject.com/route/105754969/aerial-book","imgSqSmall":"https://cdn-files.apstatic.com/climb/108269624_sqsmall_1494273060.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/108269624_small_1494273060.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/108269624_smallMed_1494273060.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/108269624_medium_1494273060.jpg","longitude":-105.2899,"latitude":39.9344},{"id":105750694,"name":"Jolt
+        Cola","type":"Sport","rating":"5.12a","stars":4.6,"starVotes":130,"pitches":1,"location":["Colorado","Boulder","Boulder
+        Canyon","Blob Rock Area","Blob Rock","Right Gully"],"url":"https://www.mountainproject.com/route/105750694/jolt-cola","imgSqSmall":"https://cdn-files.apstatic.com/climb/106340931_sqsmall_1494099624.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/106340931_small_1494099624.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/106340931_smallMed_1494099624.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/106340931_medium_1494099624.jpg","longitude":-105.3886,"latitude":40.0028},{"id":105750577,"name":"Perversion","type":"Trad","rating":"5.9","stars":4.5,"starVotes":182,"pitches":3,"location":["Colorado","Boulder","Eldorado
+        Mountain","Mickey Mouse Wall"],"url":"https://www.mountainproject.com/route/105750577/perversion","imgSqSmall":"https://cdn-files.apstatic.com/climb/105997383_sqsmall_1558388974.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/105997383_small_1558388974.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/105997383_smallMed_1558388974.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/105997383_medium_1558388974.jpg","longitude":-105.2853,"latitude":39.9198},{"id":105753610,"name":"Psychosis","type":"Trad","rating":"5.10d
+        PG13","stars":4.6,"starVotes":82,"pitches":3,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - Tower One"],"url":"https://www.mountainproject.com/route/105753610/psychosis","imgSqSmall":"https://cdn-files.apstatic.com/climb/1204542_sqsmall_1557527670.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/1204542_small_1557527670.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/1204542_smallMed_1557527670.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/1204542_medium_1557527670.jpg","longitude":-105.286,"latitude":39.9319},{"id":105748783,"name":"T2","type":"Trad","rating":"5.11a
+        R","stars":4.5,"starVotes":127,"pitches":7,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - Tower Two"],"url":"https://www.mountainproject.com/route/105748783/t2","imgSqSmall":"https://cdn-files.apstatic.com/climb/107931700_sqsmall_1494251509.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/107931700_small_1494251509.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/107931700_smallMed_1494251509.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/107931700_medium_1494251509.jpg","longitude":-105.2852,"latitude":39.9312},{"id":105756790,"name":"Empire
+        of the Fenceless","type":"Sport","rating":"5.12a","stars":4.5,"starVotes":332,"pitches":1,"location":["Colorado","Boulder","Boulder
+        Canyon","Easter Rock"],"url":"https://www.mountainproject.com/route/105756790/empire-of-the-fenceless","imgSqSmall":"https://cdn-files.apstatic.com/climb/109273195_sqsmall_1494343700.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/109273195_small_1494343700.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/109273195_smallMed_1494343700.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/109273195_medium_1494343700.jpg","longitude":-105.4185,"latitude":39.9937},{"id":105758419,"name":"The
+        Good, The Bad, and The Jacked","type":"Sport","rating":"5.12a","stars":4.6,"starVotes":83,"pitches":2,"location":["Colorado","Boulder","Boulder
+        Canyon","Vampire Rock"],"url":"https://www.mountainproject.com/route/105758419/the-good-the-bad-and-the-jacked","imgSqSmall":"https://cdn-files.apstatic.com/climb/106443120_sqsmall_1494109169.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/106443120_small_1494109169.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/106443120_smallMed_1494109169.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/106443120_medium_1494109169.jpg","longitude":-105.4139,"latitude":39.997},{"id":105749029,"name":"Xanadu","type":"Trad","rating":"5.10a","stars":4.5,"starVotes":288,"pitches":1,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","The West Ridge","West Ridge - part D - Xanadu to Pony Express"],"url":"https://www.mountainproject.com/route/105749029/xanadu","imgSqSmall":"https://cdn-files.apstatic.com/climb/106978835_sqsmall_1494155820.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/106978835_small_1494155820.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/106978835_smallMed_1494155820.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/106978835_medium_1494155820.jpg","longitude":-105.2893,"latitude":39.9335},{"id":105748924,"name":"Long
+        John Wall","type":"Trad","rating":"5.8","stars":4.4,"starVotes":534,"pitches":4,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","The West Ridge","West Ridge - part B - Long John to Verschneidung"],"url":"https://www.mountainproject.com/route/105748924/long-john-wall","imgSqSmall":"https://cdn-files.apstatic.com/climb/106796066_sqsmall_1494141152.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/106796066_small_1494141152.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/106796066_smallMed_1494141152.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/106796066_medium_1494141152.jpg","longitude":-105.2879,"latitude":39.9314},{"id":105756472,"name":"The
+        Ticket","type":"Sport","rating":"5.12a","stars":4.9,"starVotes":73,"pitches":1,"location":["Colorado","Boulder","Boulder
+        Canyon","Blob Rock Area","East Blob","Upper East Face"],"url":"https://www.mountainproject.com/route/105756472/the-ticket","imgSqSmall":"https://cdn-files.apstatic.com/climb/107936515_sqsmall_1494251832.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/107936515_small_1494251832.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/107936515_smallMed_1494251832.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/107936515_medium_1494251832.jpg","longitude":-105.3875,"latitude":40.0024},{"id":105753511,"name":"Pansee
+        Sauvage","type":"Trad, Sport","rating":"5.11b R","stars":4.6,"starVotes":89,"pitches":1,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - S Buttress"],"url":"https://www.mountainproject.com/route/105753511/pansee-sauvage","imgSqSmall":"https://cdn-files.apstatic.com/climb/1310037_sqsmall_1557851060.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/1310037_small_1557851060.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/1310037_smallMed_1557851060.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/1310037_medium_1557851060.jpg","longitude":-105.284,"latitude":39.9312},{"id":106207663,"name":"Patience
+        Face","type":"Sport, TR","rating":"5.12a","stars":4.5,"starVotes":127,"pitches":1,"location":["Colorado","Boulder","Flatirons","Central","Dinosaur
+        Rock"],"url":"https://www.mountainproject.com/route/106207663/patience-face","imgSqSmall":"https://cdn-files.apstatic.com/climb/107640400_sqsmall_1494201910.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/107640400_small_1494201910.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/107640400_smallMed_1494201910.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/107640400_medium_1494201910.jpg","longitude":-105.2875,"latitude":39.9734},{"id":105751411,"name":"Pony
+        Express","type":"Trad","rating":"5.11c","stars":4.5,"starVotes":175,"pitches":2,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","The West Ridge","West Ridge - part C - Pony Express to Long John"],"url":"https://www.mountainproject.com/route/105751411/pony-express","imgSqSmall":"https://cdn-files.apstatic.com/climb/106367398_sqsmall_1494102267.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/106367398_small_1494102267.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/106367398_smallMed_1494102267.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/106367398_medium_1494102267.jpg","longitude":-105.2885,"latitude":39.9321},{"id":105748792,"name":"C''est
+        La Vie","type":"Trad","rating":"5.11","stars":4.5,"starVotes":243,"pitches":3,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - S Buttress"],"url":"https://www.mountainproject.com/route/105748792/cest-la-vie","imgSqSmall":"https://cdn-files.apstatic.com/climb/110884310_sqsmall_1494357403.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/110884310_small_1494357403.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/110884310_smallMed_1494357403.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/110884310_medium_1494357403.jpg","longitude":-105.284,"latitude":39.9312},{"id":105748942,"name":"Rincon","type":"Trad","rating":"5.11a","stars":4.5,"starVotes":207,"pitches":4,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Rincon","Rincon - Center Route \u0026 R"],"url":"https://www.mountainproject.com/route/105748942/rincon","imgSqSmall":"https://cdn-files.apstatic.com/climb/1203931_sqsmall_1557527108.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/1203931_small_1557527108.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/1203931_smallMed_1557527108.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/1203931_medium_1557527108.jpg","longitude":-105.2894,"latitude":39.9342},{"id":105760851,"name":"Consilience","type":"Sport","rating":"5.11b/c","stars":4.5,"starVotes":120,"pitches":1,"location":["Colorado","Boulder","Boulder
+        Canyon","Black Widow Slab"],"url":"https://www.mountainproject.com/route/105760851/consilience","imgSqSmall":"https://cdn-files.apstatic.com/climb/1304682_sqsmall_1557850884.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/1304682_small_1557850884.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/1304682_smallMed_1557850884.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/1304682_medium_1557850884.jpg","longitude":-105.4145,"latitude":39.9966},{"id":105749890,"name":"Werk
+        Supp","type":"Trad","rating":"5.9","stars":4.3,"starVotes":652,"pitches":2,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","The Bastille","The Bastille - N Face"],"url":"https://www.mountainproject.com/route/105749890/werk-supp","imgSqSmall":"https://cdn-files.apstatic.com/climb/105910940_sqsmall_1557940890.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/105910940_small_1557940890.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/105910940_smallMed_1557940890.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/105910940_medium_1557940890.jpg","longitude":-105.283,"latitude":39.9307},{"id":105751315,"name":"Grand
+        Giraffe","type":"Trad","rating":"5.10a","stars":4.4,"starVotes":215,"pitches":5,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","Redgarden Wall","Redgarden - Tower One"],"url":"https://www.mountainproject.com/route/105751315/grand-giraffe","imgSqSmall":"https://cdn-files.apstatic.com/climb/111767568_sqsmall_1494303412.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/111767568_small_1494303412.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/111767568_smallMed_1494303412.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/111767568_medium_1494303412.jpg","longitude":-105.2865,"latitude":39.9314},{"id":105752560,"name":"Hand
+        Crack (aka White Lightning)","type":"Trad","rating":"5.10a","stars":4.4,"starVotes":421,"pitches":1,"location":["Colorado","Boulder","Eldorado
+        Canyon SP","The West Ridge","West Ridge - part D - Xanadu to Pony Express"],"url":"https://www.mountainproject.com/route/105752560/hand-crack-aka-white-lightning","imgSqSmall":"https://cdn-files.apstatic.com/climb/113439441_sqsmall_1502121225.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/113439441_small_1502121225.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/113439441_smallMed_1502121225.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/113439441_medium_1502121225.jpg","longitude":-105.2887,"latitude":39.9324},{"id":105748529,"name":"Sargasso
+        Sea","type":"Sport","rating":"5.12a","stars":4.4,"starVotes":127,"pitches":1,"location":["Colorado","Boulder","Upper
+        Dream Canyon","Oceanic Wall"],"url":"https://www.mountainproject.com/route/105748529/sargasso-sea","imgSqSmall":"https://cdn-files.apstatic.com/climb/117720860_sqsmall_1568063125.jpg","imgSmall":"https://cdn-files.apstatic.com/climb/117720860_small_1568063125.jpg","imgSmallMed":"https://cdn-files.apstatic.com/climb/117720860_smallMed_1568063125.jpg","imgMedium":"https://cdn-files.apstatic.com/climb/117720860_medium_1568063125.jpg","longitude":-105.4089,"latitude":40.0099}],"success":1}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:20 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/element/15c8f36a-6dec-4b91-a59c-0a9da16c6a14/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:20 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//input[((((./@type = ''submit'') or (./@type
+        = ''reset'')) or (./@type = ''image'')) or (./@type = ''button''))][((((./@id
+        = ''Save Selected Climbs'') or (./@name = ''Save Selected Climbs'')) or contains(./@value,
+        ''Save Selected Climbs'')) or contains(./@title, ''Save Selected Climbs''))]
+        | .//input[(./@type = ''image'')][contains(./@alt, ''Save Selected Climbs'')]
+        | .//button[((((((./@id = ''Save Selected Climbs'') or (./@name = ''Save Selected
+        Climbs'')) or contains(./@value, ''Save Selected Climbs'')) or contains(./@title,
+        ''Save Selected Climbs'')) or contains(normalize-space(string(.)), ''Save
+        Selected Climbs'')) or .//img[contains(./@alt, ''Save Selected Climbs'')])]
+        | .//input[(./@type = ''image'')][contains(./@alt, ''Save Selected Climbs'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '754'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"1340a276-14f1-4d72-9c09-4fd3916c5819"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:20 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"1340a276-14f1-4d72-9c09-4fd3916c5819"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:20 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"1340a276-14f1-4d72-9c09-4fd3916c5819"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:20 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":"#check-box-0"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '47'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"d3a7da98-c347-4b67-813f-713f07748614"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:20 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"d3a7da98-c347-4b67-813f-713f07748614"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:20 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"d3a7da98-c347-4b67-813f-713f07748614"},["tagName","type"]]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '247'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '30'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":["INPUT","checkbox"]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:20 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/element/d3a7da98-c347-4b67-813f-713f07748614/selected
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:20 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/element/d3a7da98-c347-4b67-813f-713f07748614/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:20 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//input[((((./@type = ''submit'') or (./@type
+        = ''reset'')) or (./@type = ''image'')) or (./@type = ''button''))][((((./@id
+        = ''Save Selected Climbs'') or (./@name = ''Save Selected Climbs'')) or contains(./@value,
+        ''Save Selected Climbs'')) or contains(./@title, ''Save Selected Climbs''))][not(./@disabled)]
+        | .//input[(./@type = ''image'')][contains(./@alt, ''Save Selected Climbs'')][not(./@disabled)]
+        | .//button[((((((./@id = ''Save Selected Climbs'') or (./@name = ''Save Selected
+        Climbs'')) or contains(./@value, ''Save Selected Climbs'')) or contains(./@title,
+        ''Save Selected Climbs'')) or contains(normalize-space(string(.)), ''Save
+        Selected Climbs'')) or .//img[contains(./@alt, ''Save Selected Climbs'')])][not(./@disabled)]
+        | .//input[(./@type = ''image'')][contains(./@alt, ''Save Selected Climbs'')][not(./@disabled)]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '826'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"1340a276-14f1-4d72-9c09-4fd3916c5819"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:20 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"1340a276-14f1-4d72-9c09-4fd3916c5819"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:20 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/be425b28ae53aacfaf0eb55fb225d26b/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"1340a276-14f1-4d72-9c09-4fd3916c5819"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:09:20 GMT
+recorded_with: VCR 5.1.0

@@ -2,6 +2,1887 @@
 http_interactions:
 - request:
     method: get
+    uri: http://127.0.0.1:60668/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '70126032591680'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:50 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session
+    body:
+      encoding: UTF-8
+      string: '{"desiredCapabilities":{"browserName":"chrome","version":"","platform":"ANY","javascriptEnabled":true,"cssSelectorsEnabled":true,"takesScreenshot":false,"nativeEvents":false,"rotatable":false},"capabilities":{"firstMatch":[{"browserName":"chrome"}]}}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '250'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '690'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"80.0.3987.132","chrome":{"chromedriverVersion":"80.0.3987.106
+        (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882})","userDataDir":"/var/folders/wq/qn91hy7n5cx1x9t0v0b1bgwc0000gn/T/.com.google.Chrome.kiZDVU"},"goog:chromeOptions":{"debuggerAddress":"localhost:60683"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"mac
+        os x","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss
+        and notify"},"sessionId":"253941d181fb95cdaa5a684bd98af6d1"}}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:53 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/url
+    body:
+      encoding: UTF-8
+      string: '{"url":"http://127.0.0.1:60668/trips/1"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '40'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:54 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".climbs"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '42'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"1dca00bd-096a-42c9-b9a6-c13fdef52437"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:54 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"1dca00bd-096a-42c9-b9a6-c13fdef52437"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:54 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/1dca00bd-096a-42c9-b9a6-c13fdef52437/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//a[./@href][((((./@id = ''The Peacemaker'')
+        or contains(normalize-space(string(.)), ''The Peacemaker'')) or contains(./@title,
+        ''The Peacemaker'')) or .//img[contains(./@alt, ''The Peacemaker'')])]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '219'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"6d8356aa-a89f-4097-ae29-3c20056ac2c4"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:54 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"6d8356aa-a89f-4097-ae29-3c20056ac2c4"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:54 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/1dca00bd-096a-42c9-b9a6-c13fdef52437/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//a[./@href][((((./@id = ''The Guillotine'')
+        or contains(normalize-space(string(.)), ''The Guillotine'')) or contains(./@title,
+        ''The Guillotine'')) or .//img[contains(./@alt, ''The Guillotine'')])]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '219'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"782f19fa-fd26-4575-817f-0655fb5877cb"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:54 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"782f19fa-fd26-4575-817f-0655fb5877cb"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:54 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".hikes"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '41'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"5be7a776-e8fb-4299-9a7b-8f7138265c50"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:54 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"5be7a776-e8fb-4299-9a7b-8f7138265c50"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:54 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/5be7a776-e8fb-4299-9a7b-8f7138265c50/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '52'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"Hikes\nYou have not added any hikes yet."}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:54 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//input[((((./@type = ''submit'') or (./@type
+        = ''reset'')) or (./@type = ''image'')) or (./@type = ''button''))][((((./@id
+        = ''Add Hikes'') or (./@name = ''Add Hikes'')) or (./@value = ''Add Hikes''))
+        or (./@title = ''Add Hikes''))] | .//input[(./@type = ''image'')][(./@alt
+        = ''Add Hikes'')] | .//button[((((((./@id = ''Add Hikes'') or (./@name = ''Add
+        Hikes'')) or (./@value = ''Add Hikes'')) or (./@title = ''Add Hikes'')) or
+        (normalize-space(string(.)) = ''Add Hikes'')) or .//img[(./@alt = ''Add Hikes'')])]
+        | .//input[(./@type = ''image'')][(./@alt = ''Add Hikes'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '566'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"8f4a039d-235f-4c70-8c41-6fbabf9d834a"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:54 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"8f4a039d-235f-4c70-8c41-6fbabf9d834a"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:54 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"8f4a039d-235f-4c70-8c41-6fbabf9d834a"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:54 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/8f4a039d-235f-4c70-8c41-6fbabf9d834a/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/url
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '56'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"http://127.0.0.1:60668/trips/1/search/hikes?"}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"/html"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '33'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"f4e51b80-573c-47e2-a1fe-da57dcb2a2f9"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"f4e51b80-573c-47e2-a1fe-da57dcb2a2f9"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/f4e51b80-573c-47e2-a1fe-da57dcb2a2f9/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '205'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"About New Trip My Trips Log Out Hi, Alison\nAdd Hikes to
+        MyString\nMinimum star rating:\n\nMaximum number of hikes returned:\n\nHow
+        far are you willing to travel from your destination?\n(miles)"}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"./descendant::*[self::input | self::textarea][not(((((((./@type
+        = ''submit'') or (./@type = ''image'')) or (./@type = ''radio'')) or (./@type
+        = ''checkbox'')) or (./@type = ''hidden'')) or (./@type = ''file'')))][((((./@id
+        = ''distance'') or (./@name = ''distance'')) or (./@placeholder = ''distance''))
+        or (./@id = //label[(normalize-space(string(.)) = ''distance'')]/@for))] |
+        .//label[(normalize-space(string(.)) = ''distance'')]//./descendant::*[self::input
+        | self::textarea][not(((((((./@type = ''submit'') or (./@type = ''image''))
+        or (./@type = ''radio'')) or (./@type = ''checkbox'')) or (./@type = ''hidden''))
+        or (./@type = ''file'')))]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '640'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"d020c455-d5d3-4255-b079-74844a7244d5"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"d020c455-d5d3-4255-b079-74844a7244d5"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"d020c455-d5d3-4255-b079-74844a7244d5"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"d020c455-d5d3-4255-b079-74844a7244d5"},["tagName","type"]]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '247'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '28'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":["INPUT","number"]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].select()","args":[{"element-6066-11e4-a52e-4f735466cecf":"d020c455-d5d3-4255-b079-74844a7244d5"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '122'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/d020c455-d5d3-4255-b079-74844a7244d5/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["1"],"text":"1"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '26'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"./descendant::*[self::input | self::textarea][not(((((((./@type
+        = ''submit'') or (./@type = ''image'')) or (./@type = ''radio'')) or (./@type
+        = ''checkbox'')) or (./@type = ''hidden'')) or (./@type = ''file'')))][((((./@id
+        = ''max_results'') or (./@name = ''max_results'')) or (./@placeholder = ''max_results''))
+        or (./@id = //label[(normalize-space(string(.)) = ''max_results'')]/@for))]
+        | .//label[(normalize-space(string(.)) = ''max_results'')]//./descendant::*[self::input
+        | self::textarea][not(((((((./@type = ''submit'') or (./@type = ''image''))
+        or (./@type = ''radio'')) or (./@type = ''checkbox'')) or (./@type = ''hidden''))
+        or (./@type = ''file'')))]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '655'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"86905e92-2fc2-4a7f-94c4-dd12c82e92f9"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"86905e92-2fc2-4a7f-94c4-dd12c82e92f9"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"86905e92-2fc2-4a7f-94c4-dd12c82e92f9"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"86905e92-2fc2-4a7f-94c4-dd12c82e92f9"},["tagName","type"]]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '247'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '28'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":["INPUT","number"]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].select()","args":[{"element-6066-11e4-a52e-4f735466cecf":"86905e92-2fc2-4a7f-94c4-dd12c82e92f9"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '122'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/86905e92-2fc2-4a7f-94c4-dd12c82e92f9/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["3"],"text":"3"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '26'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"./descendant::*[self::input | self::textarea][not(((((((./@type
+        = ''submit'') or (./@type = ''image'')) or (./@type = ''radio'')) or (./@type
+        = ''checkbox'')) or (./@type = ''hidden'')) or (./@type = ''file'')))][((((./@id
+        = ''min_stars'') or (./@name = ''min_stars'')) or (./@placeholder = ''min_stars''))
+        or (./@id = //label[(normalize-space(string(.)) = ''min_stars'')]/@for))]
+        | .//label[(normalize-space(string(.)) = ''min_stars'')]//./descendant::*[self::input
+        | self::textarea][not(((((((./@type = ''submit'') or (./@type = ''image''))
+        or (./@type = ''radio'')) or (./@type = ''checkbox'')) or (./@type = ''hidden''))
+        or (./@type = ''file'')))]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '645'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"4f9827c6-e560-4924-be26-b422c2addf2c"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"4f9827c6-e560-4924-be26-b422c2addf2c"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"4f9827c6-e560-4924-be26-b422c2addf2c"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"4f9827c6-e560-4924-be26-b422c2addf2c"},["tagName","type"]]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '247'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '28'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":["INPUT","number"]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].select()","args":[{"element-6066-11e4-a52e-4f735466cecf":"4f9827c6-e560-4924-be26-b422c2addf2c"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '122'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/4f9827c6-e560-4924-be26-b422c2addf2c/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["0"],"text":"0"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '26'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//input[((((./@type = ''submit'') or (./@type
+        = ''reset'')) or (./@type = ''image'')) or (./@type = ''button''))][((((./@id
+        = ''Find Hikes'') or (./@name = ''Find Hikes'')) or (./@value = ''Find Hikes''))
+        or (./@title = ''Find Hikes''))] | .//input[(./@type = ''image'')][(./@alt
+        = ''Find Hikes'')] | .//button[((((((./@id = ''Find Hikes'') or (./@name =
+        ''Find Hikes'')) or (./@value = ''Find Hikes'')) or (./@title = ''Find Hikes''))
+        or (normalize-space(string(.)) = ''Find Hikes'')) or .//img[(./@alt = ''Find
+        Hikes'')])] | .//input[(./@type = ''image'')][(./@alt = ''Find Hikes'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '578'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '12'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//input[((((./@type = ''submit'') or (./@type
+        = ''reset'')) or (./@type = ''image'')) or (./@type = ''button''))][((((./@id
+        = ''Find Hikes'') or (./@name = ''Find Hikes'')) or contains(./@value, ''Find
+        Hikes'')) or contains(./@title, ''Find Hikes''))] | .//input[(./@type = ''image'')][contains(./@alt,
+        ''Find Hikes'')] | .//button[((((((./@id = ''Find Hikes'') or (./@name = ''Find
+        Hikes'')) or contains(./@value, ''Find Hikes'')) or contains(./@title, ''Find
+        Hikes'')) or contains(normalize-space(string(.)), ''Find Hikes'')) or .//img[contains(./@alt,
+        ''Find Hikes'')])] | .//input[(./@type = ''image'')][contains(./@alt, ''Find
+        Hikes'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '634'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"990e03f4-e8db-425a-aa7b-abe654da1108"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"990e03f4-e8db-425a-aa7b-abe654da1108"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"990e03f4-e8db-425a-aa7b-abe654da1108"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: get
     uri: https://escape-app-api.herokuapp.com/api/v1/hike_results?lat=34.0522342&lon=-118.2436849&max_dist&max_results=3&min_stars=0
     body:
       encoding: US-ASCII
@@ -23,28 +1904,1808 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '1243'
+      - '1233'
       X-Content-Type-Options:
       - nosniff
       Server:
       - WEBrick/1.4.2 (Ruby/2.5.7/2019-10-01)
       Date:
-      - Thu, 27 Feb 2020 04:56:57 GMT
+      - Fri, 13 Mar 2020 16:39:55 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: '[{"name":"Debs Park Loop","rid":7023307,"type":"Hike","summary":"A
         scenic tour of Deb Park starting at the Audubon Center with ample opportunity
-        to spot lots of bird species.","difficulty":"greenBlue","stars":4.2,"location":"South
+        to spot lots of bird species.","difficulty":"blue","stars":4.2,"location":"South
         Pasadena, California","length":2.1,"ascent":423,"descent":-421,"longitude":-118.2011,"latitude":34.0982,"url":"https://www.hikingproject.com/trail/7023307/debs-park-loop","high":834,"low":478},{"name":"Ferndell
         to the Griffith Park Observatory","rid":7034359,"type":"Hike","summary":"Hike
         from the base of Griffith Park up to the famous Griffith Park Observatory
-        on this route.","difficulty":"greenBlue","stars":3.7,"location":"Hollywood,
-        California","length":1.3,"ascent":622,"descent":0,"longitude":-118.3078,"latitude":34.1083,"url":"https://www.hikingproject.com/trail/7034359/ferndell-to-the-griffith-park-observatory","high":1128,"low":506},{"name":"Glendale
+        on this route.","difficulty":"blue","stars":3.7,"location":"Hollywood, California","length":1.3,"ascent":622,"descent":0,"longitude":-118.3078,"latitude":34.1083,"url":"https://www.hikingproject.com/trail/7034359/ferndell-to-the-griffith-park-observatory","high":1128,"low":506},{"name":"Glendale
         Peak Loop","rid":7034123,"type":"Hike","summary":"Hike this short loop to
         summit scenic Glendale Peak.","difficulty":"blue","stars":3.5,"location":"Hollywood,
         California","length":2.5,"ascent":555,"descent":-559,"longitude":-118.2934,"latitude":34.1209,"url":"https://www.hikingproject.com/trail/7034123/glendale-peak-loop","high":1191,"low":797}]'
     http_version: null
-  recorded_at: Thu, 27 Feb 2020 04:56:55 GMT
+  recorded_at: Fri, 13 Mar 2020 16:39:55 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/990e03f4-e8db-425a-aa7b-abe654da1108/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/url
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '119'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"http://127.0.0.1:60668/trips/1/search/hikes/index?min_stars=0&max_results=3&distance=1&commit=Find+Hikes%21"}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".hike"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '40'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '248'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"954773bf-5b9f-40f3-b296-e13dd92d22bb"},{"element-6066-11e4-a52e-4f735466cecf":"ad620b6a-80f8-4883-8ecb-e25a17949a5d"},{"element-6066-11e4-a52e-4f735466cecf":"d2cb829d-c0e9-4f6d-b7a9-ae8e70a994a3"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"var vis_func = (function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})();\nreturn arguments[0].map(function(el){\n  return [vis_func].map(function(fn){
+        return fn.call(null, el) });\n});\n","args":[[{"element-6066-11e4-a52e-4f735466cecf":"954773bf-5b9f-40f3-b296-e13dd92d22bb"},{"element-6066-11e4-a52e-4f735466cecf":"ad620b6a-80f8-4883-8ecb-e25a17949a5d"},{"element-6066-11e4-a52e-4f735466cecf":"d2cb829d-c0e9-4f6d-b7a9-ae8e70a994a3"}]]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5325'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[[true],[true],[true]]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"/html"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '33'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"314b5864-c8ea-4768-91c5-51404828cd75"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"314b5864-c8ea-4768-91c5-51404828cd75"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/314b5864-c8ea-4768-91c5-51404828cd75/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '684'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"About New Trip My Trips Log Out Hi, Alison\nMyString\nMyString\nHiking
+        trail options for your Trip!\n3 results\nName Summary Difficulty Stars Location
+        Length (miles) Ascent (feet) Max Elevation (feet)\nDebs Park Loop A scenic
+        tour of Deb Park starting at the Audubon Center with ample opportunity to
+        spot lots of bird species. blue 4.2 South Pasadena, California 2.1 423 834\nFerndell
+        to the Griffith Park Observatory Hike from the base of Griffith Park up to
+        the famous Griffith Park Observatory on this route. blue 3.7 Hollywood, California
+        1.3 622 1128\nGlendale Peak Loop Hike this short loop to summit scenic Glendale
+        Peak. blue 3.5 Hollywood, California 2.5 555 1191"}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"./descendant::input[(./@type = ''checkbox'')][((((./@id
+        = ''check-box-0'') or (./@name = ''check-box-0'')) or (./@placeholder = ''check-box-0''))
+        or (./@id = //label[(normalize-space(string(.)) = ''check-box-0'')]/@for))]
+        | .//label[(normalize-space(string(.)) = ''check-box-0'')]//./descendant::input[(./@type
+        = ''checkbox'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '341'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"4dc38113-bc4a-406f-aff7-a4f7b434dde8"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"4dc38113-bc4a-406f-aff7-a4f7b434dde8"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"4dc38113-bc4a-406f-aff7-a4f7b434dde8"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"4dc38113-bc4a-406f-aff7-a4f7b434dde8"},["tagName","type"]]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '247'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '30'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":["INPUT","checkbox"]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/4dc38113-bc4a-406f-aff7-a4f7b434dde8/selected
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/4dc38113-bc4a-406f-aff7-a4f7b434dde8/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//input[((((./@type = ''submit'') or (./@type
+        = ''reset'')) or (./@type = ''image'')) or (./@type = ''button''))][((((./@id
+        = ''Save Selected Hikes'') or (./@name = ''Save Selected Hikes'')) or (./@value
+        = ''Save Selected Hikes'')) or (./@title = ''Save Selected Hikes''))] | .//input[(./@type
+        = ''image'')][(./@alt = ''Save Selected Hikes'')] | .//button[((((((./@id
+        = ''Save Selected Hikes'') or (./@name = ''Save Selected Hikes'')) or (./@value
+        = ''Save Selected Hikes'')) or (./@title = ''Save Selected Hikes'')) or (normalize-space(string(.))
+        = ''Save Selected Hikes'')) or .//img[(./@alt = ''Save Selected Hikes'')])]
+        | .//input[(./@type = ''image'')][(./@alt = ''Save Selected Hikes'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '686'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"9bd11bbf-06e4-4d73-bbca-dd710c044caa"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"9bd11bbf-06e4-4d73-bbca-dd710c044caa"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"9bd11bbf-06e4-4d73-bbca-dd710c044caa"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/9bd11bbf-06e4-4d73-bbca-dd710c044caa/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/url
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '42'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"http://127.0.0.1:60668/trips/1"}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".hikes"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '41'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"bb1990df-2bb9-4b1a-aa58-1e6425844219"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"bb1990df-2bb9-4b1a-aa58-1e6425844219"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".hikes"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '41'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"bb1990df-2bb9-4b1a-aa58-1e6425844219"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"bb1990df-2bb9-4b1a-aa58-1e6425844219"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/bb1990df-2bb9-4b1a-aa58-1e6425844219/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".hike"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '40'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"98c0e3af-c4ef-4476-92f8-fb662872db09"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"98c0e3af-c4ef-4476-92f8-fb662872db09"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/bb1990df-2bb9-4b1a-aa58-1e6425844219/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":"#hike-1"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '42'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"98c0e3af-c4ef-4476-92f8-fb662872db09"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"98c0e3af-c4ef-4476-92f8-fb662872db09"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/98c0e3af-c4ef-4476-92f8-fb662872db09/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '26'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"Debs Park Loop"}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/98c0e3af-c4ef-4476-92f8-fb662872db09/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//a[./@href][((((./@id = ''Debs Park Loop'')
+        or (normalize-space(string(.)) = ''Debs Park Loop'')) or (./@title = ''Debs
+        Park Loop'')) or .//img[(./@alt = ''Debs Park Loop'')])] | .//input[((((./@type
+        = ''submit'') or (./@type = ''reset'')) or (./@type = ''image'')) or (./@type
+        = ''button''))][((((./@id = ''Debs Park Loop'') or (./@name = ''Debs Park
+        Loop'')) or (./@value = ''Debs Park Loop'')) or (./@title = ''Debs Park Loop''))]
+        | .//input[(./@type = ''image'')][(./@alt = ''Debs Park Loop'')] | .//button[((((((./@id
+        = ''Debs Park Loop'') or (./@name = ''Debs Park Loop'')) or (./@value = ''Debs
+        Park Loop'')) or (./@title = ''Debs Park Loop'')) or (normalize-space(string(.))
+        = ''Debs Park Loop'')) or .//img[(./@alt = ''Debs Park Loop'')])] | .//input[(./@type
+        = ''image'')][(./@alt = ''Debs Park Loop'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '799'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"53a8b02a-78aa-4e4b-9d28-1bc85b9cc3c8"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"53a8b02a-78aa-4e4b-9d28-1bc85b9cc3c8"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return arguments[0].matches('':disabled, select:disabled
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"53a8b02a-78aa-4e4b-9d28-1bc85b9cc3c8"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '160'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/53a8b02a-78aa-4e4b-9d28-1bc85b9cc3c8/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/98c0e3af-c4ef-4476-92f8-fb662872db09/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '137'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"Debs Park Loop\nA scenic tour of Deb Park starting at the
+        Audubon Center with ample opportunity to spot lots of bird species."}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:56 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/98c0e3af-c4ef-4476-92f8-fb662872db09/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '302'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"Debs Park Loop\nA scenic tour of Deb Park starting at the
+        Audubon Center with ample opportunity to spot lots of bird species.\nDifficulty:
+        blue\nStars: 4\nLocation: South Pasadena, California\nDistance in Miles: 2.1\nElevation
+        Gain: 423\nMax Elevation: 834\nLink to additional trail details"}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:57 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/98c0e3af-c4ef-4476-92f8-fb662872db09/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '302'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"Debs Park Loop\nA scenic tour of Deb Park starting at the
+        Audubon Center with ample opportunity to spot lots of bird species.\nDifficulty:
+        blue\nStars: 4\nLocation: South Pasadena, California\nDistance in Miles: 2.1\nElevation
+        Gain: 423\nMax Elevation: 834\nLink to additional trail details"}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:57 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/98c0e3af-c4ef-4476-92f8-fb662872db09/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '302'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"Debs Park Loop\nA scenic tour of Deb Park starting at the
+        Audubon Center with ample opportunity to spot lots of bird species.\nDifficulty:
+        blue\nStars: 4\nLocation: South Pasadena, California\nDistance in Miles: 2.1\nElevation
+        Gain: 423\nMax Elevation: 834\nLink to additional trail details"}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:57 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/98c0e3af-c4ef-4476-92f8-fb662872db09/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '302'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"Debs Park Loop\nA scenic tour of Deb Park starting at the
+        Audubon Center with ample opportunity to spot lots of bird species.\nDifficulty:
+        blue\nStars: 4\nLocation: South Pasadena, California\nDistance in Miles: 2.1\nElevation
+        Gain: 423\nMax Elevation: 834\nLink to additional trail details"}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:57 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/98c0e3af-c4ef-4476-92f8-fb662872db09/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '302'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"Debs Park Loop\nA scenic tour of Deb Park starting at the
+        Audubon Center with ample opportunity to spot lots of bird species.\nDifficulty:
+        blue\nStars: 4\nLocation: South Pasadena, California\nDistance in Miles: 2.1\nElevation
+        Gain: 423\nMax Elevation: 834\nLink to additional trail details"}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:57 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/element/98c0e3af-c4ef-4476-92f8-fb662872db09/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//a[(./@href = ''https://www.hikingproject.com/trail/7023307/debs-park-loop'')][((((./@id
+        = ''Link to additional trail details'') or contains(normalize-space(string(.)),
+        ''Link to additional trail details'')) or contains(./@title, ''Link to additional
+        trail details'')) or .//img[contains(./@alt, ''Link to additional trail details'')])]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '356'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"a2f6af7f-674e-4016-857e-3c1eb424cdcc"}]}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:57 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9515/session/253941d181fb95cdaa5a684bd98af6d1/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
+        e=x(t);if(0<e.height&&0<e.width)return!0;if(\"PATH\"==t.tagName.toUpperCase()&&(0<e.height||0<e.width)){var
+        n=window.getComputedStyle(t)[\"stroke-width\"];return!!n&&0<parseInt(n,10)}return\"hidden\"!=window.getComputedStyle(t).overflow&&Array.prototype.slice.call(t.childNodes).some(function(t){return
+        t.nodeType==Node.TEXT_NODE||t.nodeType==Node.ELEMENT_NODE&&r(t)})}function
+        i(t){return C(t)==T.HIDDEN&&Array.prototype.slice.call(t.childNodes).every(function(t){return
+        t.nodeType!=Node.ELEMENT_NODE||i(t)||!r(t)})}var o=t.tagName.toUpperCase();if(\"BODY\"==o)return!0;if(\"OPTION\"==o||\"OPTGROUP\"==o){var
+        a=c(t,function(t){return\"SELECT\"==t.tagName.toUpperCase()});return!!a&&d(a,!0,n)}var
+        u=s(t);if(u)return!!u.image&&0<u.rect.width&&0<u.rect.height&&d(u.image,e,n);if(\"INPUT\"==o&&\"hidden\"==t.type.toLowerCase())return!1;if(\"NOSCRIPT\"==o)return!1;var
+        l=window.getComputedStyle(t).visibility;return\"collapse\"!=l&&\"hidden\"!=l&&(!!n(t)&&(!(!e&&0==f(t))&&(!!r(t)&&!i(t))))}function
+        E(t){var e=x(t);return{left:e.left,right:e.left+e.width,top:e.top,bottom:e.top+e.height}}function
+        D(t){return t.parentElement}function C(t){function e(t){function e(t){if(t==u)return!0;var
+        e=window.getComputedStyle(t),n=e.display;return 0!=n.indexOf(\"inline\")&&\"contents\"!=n&&(\"absolute\"!=r||\"static\"!=e.position)}var
+        r=window.getComputedStyle(t).position;if(\"fixed\"==r)return i=!0,t==u?null:u;for(var
+        n=D(t);n&&!e(n);)n=D(n);return n}function n(t){var e=t;if(\"visible\"==d)if(t==u&&l)e=l;else
+        if(t==l)return{x:\"visible\",y:\"visible\"};var n=window.getComputedStyle(e),r={x:n[\"overflow-x\"],y:n[\"overflow-y\"]};return
+        t==u&&(r.x=\"visible\"==r.x?\"auto\":r.x,r.y=\"visible\"==r.y?\"auto\":r.y),r}function
+        r(t){return t==u?{x:window.scrollX,y:window.scrollY}:{x:t.scrollLeft,y:t.scrollTop}}for(var
+        i,o=E(t),a=t.ownerDocument,u=a.documentElement,l=a.body,d=window.getComputedStyle(u).overflow,f=e(t);f;f=e(f)){var
+        h=n(f);if(\"visible\"!=h.x||\"visible\"!=h.y){var s=x(f);if(0==s.width||0==s.height)return
+        T.HIDDEN;var p=o.right<s.left,c=o.bottom<s.top;if(p&&\"hidden\"==h.x||c&&\"hidden\"==h.y)return
+        T.HIDDEN;if(p&&\"visible\"!=h.x||c&&\"visible\"!=h.y){var v=r(f),g=o.right<s.left-v.x,w=o.bottom<s.top-v.y;return
+        g&&\"visible\"!=h.x||w&&\"visible\"!=h.x?T.HIDDEN:C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}var
+        N=o.left>=s.left+s.width,m=o.top>=s.top+s.height;if(N&&\"hidden\"==h.x||m&&\"hidden\"==h.y)return
+        T.HIDDEN;if(N&&\"visible\"!=h.x||m&&\"visible\"!=h.y){if(i){var y=r(f);if(o.left>=u.scrollWidth-y.x||o.right>=u.scrollHeight-y.y)return
+        T.HIDDEN}return C(f)==T.HIDDEN?T.HIDDEN:T.SCROLL}}}return T.NONE}function
+        o(t){var e=t.document.documentElement;return{width:e.clientWidth,height:e.clientHeight}}function
+        p(t,e,n,r){return{left:t,top:e,width:n,height:r}}function x(t){var e,n=s(t);if(n)return
+        n.rect;if(\"HTML\"==t.tagName.toUpperCase()){t.ownerDocument;var r=o(window);return
+        p(0,0,r.width,r.height)}try{e=t.getBoundingClientRect()}catch(i){return p(0,0,0,0)}return
+        p(e.left,e.top,e.right-e.left,e.bottom-e.top)}function f(t){var e=1,n=window.getComputedStyle(t).opacity;n&&(e=Number(n));var
+        r=D(t);return r&&r.nodeType==Node.ELEMENT_NODE&&(e*=f(r)),e}function h(t){var
+        e=t.shape.toLowerCase(),n=t.coords.split(\",\");if(\"rect\"==e&&4==n.length){var
+        r=n[0],i=n[1];return p(r,i,n[2]-r,n[3]-i)}if(\"circle\"==e&&3==n.length){var
+        o=n[0],a=n[1],u=n[2];return p(o-u,a-u,2*u,2*u)}if(\"poly\"==e&&2<n.length){for(var
+        l=n[0],d=n[1],f=l,h=d,s=2;s+1<n.length;s+=2)l=Math.min(l,n[s]),f=Math.max(f,n[s]),d=Math.min(d,n[s+1]),h=Math.max(h,n[s+1]);return
+        p(l,d,f-l,h-d)}return p(0,0,0,0)}function s(t){var e=t.tagName.toUpperCase(),n=\"MAP\"==e;if(!n&&\"AREA\"!=e)return
+        null;var r=n?t:\"MAP\"==D(t).tagName.toUpperCase()?D(t):null,i=null,o=null;if(r&&r.name&&((i=r.ownerDocument.querySelector(\"*[usemap=''#\"+r.name+\"'']\"))&&(o=x(i),!n&&\"default\"!=t.shape.toLowerCase()))){var
+        a=h(t),u=Math.min(Math.max(a.left,0),o.width),l=Math.min(Math.max(a.top,0),o.height),d=Math.min(a.width,o.width-u),f=Math.min(a.height,o.height-l);o=p(u+o.left,l+o.top,d,f)}return{image:i,rect:o||p(0,0,0,0)}}function
+        c(t,e){for(t&&(t=D(t));t;){if(e(t))return t;t=D(t)}return null}function r(t){var
+        e=t.parentNode;if(e&&e.shadowRoot&&t.assignedSlot!==undefined)return t.assignedSlot?t.assignedSlot.parentNode:null;if(t.getDestinationInsertionPoints){var
+        n=t.getDestinationInsertionPoints();if(0<n.length)return n[n.length-1]}return
+        e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
+        i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
+        e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"a2f6af7f-674e-4016-857e-3c1eb424cdcc"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Content-Length:
+      - '5067'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 16:39:57 GMT
 recorded_with: VCR 5.1.0

@@ -2,20 +2,16 @@ class Hikes::TripsController < ApplicationController
   before_action :require_current_user
 
   def new
-    @destination = Destination.new(session[:destination])
-
-    lat = session[:destination]["lat"]
-    lng = session[:destination]["lng"]
-    all_hikes = EscapeService.new.get_hike_results(params, lat, lng)
-    @hike_options = all_hikes.map do |hike_response|
-      HikeOption.new(hike_response)
-    end
-    if @hike_options.count == 0
+    hikes_facade = HikesFacade.new(session[:destination], params)
+    if hikes_facade.number_of_hikes == 0
       flash[:notice] = "No results returned, please adjust your search and try again."
       redirect_to "/search/hikes/new"
+    else
+      render locals: {
+        hikes_facade: hikes_facade
+      }
     end
   end
-
 
   def create
     destination = session["destination"]

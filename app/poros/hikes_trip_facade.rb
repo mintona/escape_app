@@ -1,4 +1,4 @@
-class HikesFacade
+class HikesTripFacade
   def initialize(destination, search_params)
     @destination = Destination.new(destination)
     @search_params = search_params

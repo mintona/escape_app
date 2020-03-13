@@ -2,7 +2,7 @@ class Hikes::TripsController < ApplicationController
   before_action :require_current_user
 
   def new
-    hikes_facade = HikesFacade.new(session[:destination], params)
+    hikes_facade = HikesTripFacade.new(session[:destination], params)
     if hikes_facade.number_of_hikes == 0
       flash[:notice] = "No results returned, please adjust your search and try again."
       redirect_to "/search/hikes/new"

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://127.0.0.1:61562/__identify__
+    uri: http://127.0.0.1:59561/__identify__
     body:
       encoding: US-ASCII
       string: ''
@@ -22,9 +22,9 @@ http_interactions:
       - '14'
     body:
       encoding: UTF-8
-      string: '70105234930800'
+      string: '70102080710880'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:12 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:40 GMT
 - request:
     method: post
     uri: http://127.0.0.1:9515/session
@@ -56,17 +56,17 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"80.0.3987.132","chrome":{"chromedriverVersion":"80.0.3987.106
-        (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882})","userDataDir":"/var/folders/wq/qn91hy7n5cx1x9t0v0b1bgwc0000gn/T/.com.google.Chrome.TDRe33"},"goog:chromeOptions":{"debuggerAddress":"localhost:61573"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"mac
+        (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882})","userDataDir":"/var/folders/wq/qn91hy7n5cx1x9t0v0b1bgwc0000gn/T/.com.google.Chrome.HV7JhQ"},"goog:chromeOptions":{"debuggerAddress":"localhost:59572"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"mac
         os x","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss
-        and notify"},"sessionId":"5a63a946f95d7aa2b39bfea10081b415"}}'
+        and notify"},"sessionId":"25e0f98fe60c51eb5931d5c2c08ae08e"}}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:13 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:42 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/url
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/url
     body:
       encoding: UTF-8
-      string: '{"url":"http://127.0.0.1:61562/search"}'
+      string: '{"url":"http://127.0.0.1:59561/search"}'
     headers:
       Accept:
       - application/json
@@ -93,10 +93,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:15 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:43 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":"./descendant::*[self::input | self::textarea][not(((((((./@type
@@ -132,12 +132,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"5f83a036-1709-4f26-b715-4d030938c57f"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"3e722f66-523c-4ffc-80bd-94040a4d9061"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:15 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:43 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -184,7 +184,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"5f83a036-1709-4f26-b715-4d030938c57f"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"3e722f66-523c-4ffc-80bd-94040a4d9061"}]}'
     headers:
       Accept:
       - application/json
@@ -211,14 +211,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:15 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:43 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return arguments[0].matches('':disabled, select:disabled
-        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"5f83a036-1709-4f26-b715-4d030938c57f"}]}'
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"3e722f66-523c-4ffc-80bd-94040a4d9061"}]}'
     headers:
       Accept:
       - application/json
@@ -245,14 +245,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":false}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:15 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:43 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
-        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"5f83a036-1709-4f26-b715-4d030938c57f"},["tagName","type"]]}'
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"3e722f66-523c-4ffc-80bd-94040a4d9061"},["tagName","type"]]}'
     headers:
       Accept:
       - application/json
@@ -279,13 +279,13 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":["INPUT","text"]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:15 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:43 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
-      string: '{"script":"arguments[0].select()","args":[{"element-6066-11e4-a52e-4f735466cecf":"5f83a036-1709-4f26-b715-4d030938c57f"}]}'
+      string: '{"script":"arguments[0].select()","args":[{"element-6066-11e4-a52e-4f735466cecf":"3e722f66-523c-4ffc-80bd-94040a4d9061"}]}'
     headers:
       Accept:
       - application/json
@@ -312,10 +312,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:15 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:43 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/5f83a036-1709-4f26-b715-4d030938c57f/value
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/3e722f66-523c-4ffc-80bd-94040a4d9061/value
     body:
       encoding: UTF-8
       string: '{"value":["B","o","u","l","d","e","r"],"text":"Boulder"}'
@@ -345,10 +345,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:15 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:43 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":"./descendant::input[(./@type = ''radio'')][((((./@id
@@ -379,12 +379,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"19abc61e-28af-42ed-bd61-c1da57f7d9f9"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"23e3aef1-e597-4e79-b4fb-e2d2d5fb5050"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:15 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:43 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -431,7 +431,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"19abc61e-28af-42ed-bd61-c1da57f7d9f9"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"23e3aef1-e597-4e79-b4fb-e2d2d5fb5050"}]}'
     headers:
       Accept:
       - application/json
@@ -458,14 +458,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:15 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:43 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return arguments[0].matches('':disabled, select:disabled
-        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"19abc61e-28af-42ed-bd61-c1da57f7d9f9"}]}'
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"23e3aef1-e597-4e79-b4fb-e2d2d5fb5050"}]}'
     headers:
       Accept:
       - application/json
@@ -492,14 +492,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":false}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:15 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:43 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
-        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"19abc61e-28af-42ed-bd61-c1da57f7d9f9"},["tagName","type"]]}'
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"23e3aef1-e597-4e79-b4fb-e2d2d5fb5050"},["tagName","type"]]}'
     headers:
       Accept:
       - application/json
@@ -526,10 +526,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":["INPUT","radio"]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:15 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:43 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/19abc61e-28af-42ed-bd61-c1da57f7d9f9/click
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/23e3aef1-e597-4e79-b4fb-e2d2d5fb5050/click
     body:
       encoding: UTF-8
       string: "{}"
@@ -559,10 +559,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:15 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:43 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":".//input[((((./@type = ''submit'') or (./@type
@@ -597,12 +597,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"5506ef6e-1997-4fe0-9676-0691be4defb0"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"bbcdd067-2945-4fee-8bac-a45440770427"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:15 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:43 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -649,7 +649,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"5506ef6e-1997-4fe0-9676-0691be4defb0"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"bbcdd067-2945-4fee-8bac-a45440770427"}]}'
     headers:
       Accept:
       - application/json
@@ -676,14 +676,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:15 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:43 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return arguments[0].matches('':disabled, select:disabled
-        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"5506ef6e-1997-4fe0-9676-0691be4defb0"}]}'
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"bbcdd067-2945-4fee-8bac-a45440770427"}]}'
     headers:
       Accept:
       - application/json
@@ -710,7 +710,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":false}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:15 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:43 GMT
 - request:
     method: get
     uri: https://escape-app-api.herokuapp.com/api/v1/destination/Boulder
@@ -740,7 +740,7 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.5.7/2019-10-01)
       Date:
-      - Fri, 13 Mar 2020 22:29:15 GMT
+      - Fri, 13 Mar 2020 23:07:45 GMT
       Via:
       - 1.1 vegur
     body:
@@ -748,10 +748,10 @@ http_interactions:
       string: '{"data":{"id":"16","type":"destination","attributes":{"name":"Boulder","full_address":"Boulder,
         CO, USA","longitude":-105.2705456,"latitude":40.0149856}}}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/5506ef6e-1997-4fe0-9676-0691be4defb0/click
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/bbcdd067-2945-4fee-8bac-a45440770427/click
     body:
       encoding: UTF-8
       string: "{}"
@@ -781,10 +781,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/url
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/url
     body:
       encoding: US-ASCII
       string: ''
@@ -812,12 +812,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":"http://127.0.0.1:61562/search/hikes/new"}'
+      string: '{"value":"http://127.0.0.1:59561/search/hikes/new"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":"/html"}'
@@ -845,12 +845,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"6d2afa44-0fa9-4e69-ba8b-07c095189a21"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"76320630-b231-45df-840f-b91465b603fd"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -897,7 +897,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"6d2afa44-0fa9-4e69-ba8b-07c095189a21"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"76320630-b231-45df-840f-b91465b603fd"}]}'
     headers:
       Accept:
       - application/json
@@ -924,10 +924,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/6d2afa44-0fa9-4e69-ba8b-07c095189a21/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/76320630-b231-45df-840f-b91465b603fd/text
     body:
       encoding: US-ASCII
       string: ''
@@ -959,10 +959,10 @@ http_interactions:
         Boulder\nBoulder, CO, USA\nMinimum star rating:\n\nMaximum number of hikes
         returned:\n\nHow far are you willing to travel from your destination?\n(miles)"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":"./descendant::*[self::input | self::textarea][not(((((((./@type
@@ -998,12 +998,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"781b5895-4b7b-4be3-89f9-5bdc12b65cef"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"bb566d14-b5f0-4ee3-a038-16b1e95c860d"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -1050,7 +1050,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"781b5895-4b7b-4be3-89f9-5bdc12b65cef"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"bb566d14-b5f0-4ee3-a038-16b1e95c860d"}]}'
     headers:
       Accept:
       - application/json
@@ -1077,14 +1077,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return arguments[0].matches('':disabled, select:disabled
-        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"781b5895-4b7b-4be3-89f9-5bdc12b65cef"}]}'
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"bb566d14-b5f0-4ee3-a038-16b1e95c860d"}]}'
     headers:
       Accept:
       - application/json
@@ -1111,14 +1111,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":false}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
-        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"781b5895-4b7b-4be3-89f9-5bdc12b65cef"},["tagName","type"]]}'
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"bb566d14-b5f0-4ee3-a038-16b1e95c860d"},["tagName","type"]]}'
     headers:
       Accept:
       - application/json
@@ -1145,13 +1145,13 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":["INPUT","number"]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
-      string: '{"script":"arguments[0].select()","args":[{"element-6066-11e4-a52e-4f735466cecf":"781b5895-4b7b-4be3-89f9-5bdc12b65cef"}]}'
+      string: '{"script":"arguments[0].select()","args":[{"element-6066-11e4-a52e-4f735466cecf":"bb566d14-b5f0-4ee3-a038-16b1e95c860d"}]}'
     headers:
       Accept:
       - application/json
@@ -1178,10 +1178,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/781b5895-4b7b-4be3-89f9-5bdc12b65cef/value
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/bb566d14-b5f0-4ee3-a038-16b1e95c860d/value
     body:
       encoding: UTF-8
       string: '{"value":["1"],"text":"1"}'
@@ -1211,10 +1211,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":"./descendant::*[self::input | self::textarea][not(((((((./@type
@@ -1250,12 +1250,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"8a43544b-cb7a-4977-8c06-0c57766fb5a1"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"18402b87-88bb-43b0-841e-8da816827446"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -1302,7 +1302,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"8a43544b-cb7a-4977-8c06-0c57766fb5a1"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"18402b87-88bb-43b0-841e-8da816827446"}]}'
     headers:
       Accept:
       - application/json
@@ -1329,14 +1329,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return arguments[0].matches('':disabled, select:disabled
-        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"8a43544b-cb7a-4977-8c06-0c57766fb5a1"}]}'
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"18402b87-88bb-43b0-841e-8da816827446"}]}'
     headers:
       Accept:
       - application/json
@@ -1363,14 +1363,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":false}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
-        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"8a43544b-cb7a-4977-8c06-0c57766fb5a1"},["tagName","type"]]}'
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"18402b87-88bb-43b0-841e-8da816827446"},["tagName","type"]]}'
     headers:
       Accept:
       - application/json
@@ -1397,13 +1397,13 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":["INPUT","number"]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
-      string: '{"script":"arguments[0].select()","args":[{"element-6066-11e4-a52e-4f735466cecf":"8a43544b-cb7a-4977-8c06-0c57766fb5a1"}]}'
+      string: '{"script":"arguments[0].select()","args":[{"element-6066-11e4-a52e-4f735466cecf":"18402b87-88bb-43b0-841e-8da816827446"}]}'
     headers:
       Accept:
       - application/json
@@ -1430,10 +1430,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/8a43544b-cb7a-4977-8c06-0c57766fb5a1/value
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/18402b87-88bb-43b0-841e-8da816827446/value
     body:
       encoding: UTF-8
       string: '{"value":["3"],"text":"3"}'
@@ -1463,10 +1463,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":"./descendant::*[self::input | self::textarea][not(((((((./@type
@@ -1502,12 +1502,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"d93da0f0-2555-457c-87b6-eccea19f622f"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"f8f32403-6a43-41a7-993c-717654ece569"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -1554,7 +1554,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"d93da0f0-2555-457c-87b6-eccea19f622f"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"f8f32403-6a43-41a7-993c-717654ece569"}]}'
     headers:
       Accept:
       - application/json
@@ -1581,14 +1581,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return arguments[0].matches('':disabled, select:disabled
-        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"d93da0f0-2555-457c-87b6-eccea19f622f"}]}'
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"f8f32403-6a43-41a7-993c-717654ece569"}]}'
     headers:
       Accept:
       - application/json
@@ -1615,14 +1615,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":false}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
-        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"d93da0f0-2555-457c-87b6-eccea19f622f"},["tagName","type"]]}'
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"f8f32403-6a43-41a7-993c-717654ece569"},["tagName","type"]]}'
     headers:
       Accept:
       - application/json
@@ -1649,13 +1649,13 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":["INPUT","number"]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
-      string: '{"script":"arguments[0].select()","args":[{"element-6066-11e4-a52e-4f735466cecf":"d93da0f0-2555-457c-87b6-eccea19f622f"}]}'
+      string: '{"script":"arguments[0].select()","args":[{"element-6066-11e4-a52e-4f735466cecf":"f8f32403-6a43-41a7-993c-717654ece569"}]}'
     headers:
       Accept:
       - application/json
@@ -1682,10 +1682,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/d93da0f0-2555-457c-87b6-eccea19f622f/value
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/f8f32403-6a43-41a7-993c-717654ece569/value
     body:
       encoding: UTF-8
       string: '{"value":["0"],"text":"0"}'
@@ -1715,10 +1715,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":".//input[((((./@type = ''submit'') or (./@type
@@ -1755,10 +1755,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":[]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":".//input[((((./@type = ''submit'') or (./@type
@@ -1794,12 +1794,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"c8bfbdf9-29b4-4a55-bfb3-6d4bb686bc18"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"f54c4f83-5947-4364-b551-aa5202fe231b"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -1846,7 +1846,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"c8bfbdf9-29b4-4a55-bfb3-6d4bb686bc18"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"f54c4f83-5947-4364-b551-aa5202fe231b"}]}'
     headers:
       Accept:
       - application/json
@@ -1873,14 +1873,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return arguments[0].matches('':disabled, select:disabled
-        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"c8bfbdf9-29b4-4a55-bfb3-6d4bb686bc18"}]}'
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"f54c4f83-5947-4364-b551-aa5202fe231b"}]}'
     headers:
       Accept:
       - application/json
@@ -1907,7 +1907,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":false}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:45 GMT
 - request:
     method: get
     uri: https://escape-app-api.herokuapp.com/api/v1/hike_results?lat=40.0149856&lon=-105.2705456&max_dist&max_results=3&min_stars=0
@@ -1937,7 +1937,7 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.5.7/2019-10-01)
       Date:
-      - Fri, 13 Mar 2020 22:29:16 GMT
+      - Fri, 13 Mar 2020 23:07:45 GMT
       Via:
       - 1.1 vegur
     body:
@@ -1952,10 +1952,10 @@ http_interactions:
         views are the reward for this gentler loop in Sunshine Canyon.","difficulty":"blue","stars":4.5,"location":"Boulder,
         Colorado","length":5.3,"ascent":1261,"descent":-1282,"longitude":-105.2979,"latitude":40.02,"url":"https://www.hikingproject.com/trail/7004226/sunshine-lions-lair-loop","high":6800,"low":5530}]'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:16 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/c8bfbdf9-29b4-4a55-bfb3-6d4bb686bc18/click
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/f54c4f83-5947-4364-b551-aa5202fe231b/click
     body:
       encoding: UTF-8
       string: "{}"
@@ -1985,10 +1985,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/url
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/url
     body:
       encoding: US-ASCII
       string: ''
@@ -2016,12 +2016,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":"http://127.0.0.1:61562/hikes/trips/new?min_stars=0&max_results=3&distance=1&commit=Find+Hikes%21"}'
+      string: '{"value":"http://127.0.0.1:59561/hikes/trips/new?min_stars=0&max_results=3&distance=1&commit=Find+Hikes%21"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"css selector","value":".hike"}'
@@ -2049,12 +2049,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"ab9f2093-a57e-48b1-a13d-823029c47801"},{"element-6066-11e4-a52e-4f735466cecf":"0306b9e3-9af2-4d29-b97f-3eaef10cfce6"},{"element-6066-11e4-a52e-4f735466cecf":"42f07676-99a2-43e5-a35f-a67f0e9bcd5f"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"d1ee0ed9-4828-4b16-bc76-4c8df73eb214"},{"element-6066-11e4-a52e-4f735466cecf":"cac8b813-d5e9-44e7-ba01-94477d25e634"},{"element-6066-11e4-a52e-4f735466cecf":"7af0a7ab-be61-48cd-89f2-6c9de80dd51b"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"var vis_func = (function(){function d(t,e,n){function r(t){var
@@ -2102,7 +2102,7 @@ http_interactions:
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
         d(t,!!e,n)}})();\nreturn arguments[0].map(function(el){\n  return [vis_func].map(function(fn){
-        return fn.call(null, el) });\n});\n","args":[[{"element-6066-11e4-a52e-4f735466cecf":"ab9f2093-a57e-48b1-a13d-823029c47801"},{"element-6066-11e4-a52e-4f735466cecf":"0306b9e3-9af2-4d29-b97f-3eaef10cfce6"},{"element-6066-11e4-a52e-4f735466cecf":"42f07676-99a2-43e5-a35f-a67f0e9bcd5f"}]]}'
+        return fn.call(null, el) });\n});\n","args":[[{"element-6066-11e4-a52e-4f735466cecf":"d1ee0ed9-4828-4b16-bc76-4c8df73eb214"},{"element-6066-11e4-a52e-4f735466cecf":"cac8b813-d5e9-44e7-ba01-94477d25e634"},{"element-6066-11e4-a52e-4f735466cecf":"7af0a7ab-be61-48cd-89f2-6c9de80dd51b"}]]}'
     headers:
       Accept:
       - application/json
@@ -2129,10 +2129,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":[[true],[true],[true]]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":"/html"}'
@@ -2160,12 +2160,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"d8f7c1ff-34aa-4687-920e-bc05f3ad5efd"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"02c2dfe5-8b80-4618-bff0-12f5577f2319"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -2212,7 +2212,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"d8f7c1ff-34aa-4687-920e-bc05f3ad5efd"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"02c2dfe5-8b80-4618-bff0-12f5577f2319"}]}'
     headers:
       Accept:
       - application/json
@@ -2239,10 +2239,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/d8f7c1ff-34aa-4687-920e-bc05f3ad5efd/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/02c2dfe5-8b80-4618-bff0-12f5577f2319/text
     body:
       encoding: US-ASCII
       string: ''
@@ -2280,10 +2280,10 @@ http_interactions:
         Sanitas views are the reward for this gentler loop in Sunshine Canyon. blue
         4.5 Boulder, Colorado 5.3 1261 6800"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"css selector","value":"#hike-result-0"}'
@@ -2311,12 +2311,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"4e505b57-9c68-4cbd-a17c-4e1310ecbd40"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"c5a69bff-6a60-40ca-a9ea-aa021489166f"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -2363,7 +2363,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"4e505b57-9c68-4cbd-a17c-4e1310ecbd40"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"c5a69bff-6a60-40ca-a9ea-aa021489166f"}]}'
     headers:
       Accept:
       - application/json
@@ -2390,10 +2390,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/4e505b57-9c68-4cbd-a17c-4e1310ecbd40/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/c5a69bff-6a60-40ca-a9ea-aa021489166f/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":".//a[(./@href = ''https://www.hikingproject.com/trail/7006781/dakota-ridge-to-sanitas-valley-loop'')][((((./@id
@@ -2425,12 +2425,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"4ee14168-ec31-4de3-8e35-b3fdf97238f1"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"2ae19804-d480-4a4b-ab17-febc94e0d67b"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -2477,7 +2477,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"4ee14168-ec31-4de3-8e35-b3fdf97238f1"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"2ae19804-d480-4a4b-ab17-febc94e0d67b"}]}'
     headers:
       Accept:
       - application/json
@@ -2504,10 +2504,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/4e505b57-9c68-4cbd-a17c-4e1310ecbd40/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/c5a69bff-6a60-40ca-a9ea-aa021489166f/text
     body:
       encoding: US-ASCII
       string: ''
@@ -2539,10 +2539,10 @@ http_interactions:
         a great view of Boulder, followed by a nice, open downhill pitch. blue 4 Boulder,
         Colorado 2.3 458 5961"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/4e505b57-9c68-4cbd-a17c-4e1310ecbd40/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/c5a69bff-6a60-40ca-a9ea-aa021489166f/text
     body:
       encoding: US-ASCII
       string: ''
@@ -2574,10 +2574,10 @@ http_interactions:
         a great view of Boulder, followed by a nice, open downhill pitch. blue 4 Boulder,
         Colorado 2.3 458 5961"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/4e505b57-9c68-4cbd-a17c-4e1310ecbd40/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/c5a69bff-6a60-40ca-a9ea-aa021489166f/text
     body:
       encoding: US-ASCII
       string: ''
@@ -2609,10 +2609,10 @@ http_interactions:
         a great view of Boulder, followed by a nice, open downhill pitch. blue 4 Boulder,
         Colorado 2.3 458 5961"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/4e505b57-9c68-4cbd-a17c-4e1310ecbd40/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/c5a69bff-6a60-40ca-a9ea-aa021489166f/text
     body:
       encoding: US-ASCII
       string: ''
@@ -2644,10 +2644,10 @@ http_interactions:
         a great view of Boulder, followed by a nice, open downhill pitch. blue 4 Boulder,
         Colorado 2.3 458 5961"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/4e505b57-9c68-4cbd-a17c-4e1310ecbd40/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/c5a69bff-6a60-40ca-a9ea-aa021489166f/text
     body:
       encoding: US-ASCII
       string: ''
@@ -2679,10 +2679,10 @@ http_interactions:
         a great view of Boulder, followed by a nice, open downhill pitch. blue 4 Boulder,
         Colorado 2.3 458 5961"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/4e505b57-9c68-4cbd-a17c-4e1310ecbd40/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/c5a69bff-6a60-40ca-a9ea-aa021489166f/text
     body:
       encoding: US-ASCII
       string: ''
@@ -2714,10 +2714,10 @@ http_interactions:
         a great view of Boulder, followed by a nice, open downhill pitch. blue 4 Boulder,
         Colorado 2.3 458 5961"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/4e505b57-9c68-4cbd-a17c-4e1310ecbd40/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/c5a69bff-6a60-40ca-a9ea-aa021489166f/text
     body:
       encoding: US-ASCII
       string: ''
@@ -2749,10 +2749,10 @@ http_interactions:
         a great view of Boulder, followed by a nice, open downhill pitch. blue 4 Boulder,
         Colorado 2.3 458 5961"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"css selector","value":"#hike-result-1"}'
@@ -2780,12 +2780,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"d44d7056-a2da-4f5c-8ce5-7953f51cee97"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"f1195c51-1ef5-460a-aedd-869a1397d0aa"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -2832,7 +2832,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"d44d7056-a2da-4f5c-8ce5-7953f51cee97"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"f1195c51-1ef5-460a-aedd-869a1397d0aa"}]}'
     headers:
       Accept:
       - application/json
@@ -2859,10 +2859,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/d44d7056-a2da-4f5c-8ce5-7953f51cee97/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/f1195c51-1ef5-460a-aedd-869a1397d0aa/text
     body:
       encoding: US-ASCII
       string: ''
@@ -2893,10 +2893,10 @@ http_interactions:
       string: '{"value":"Mount Sanitas Loop Very popular and scenic loop right from
         the edge of town. black 4.2 Boulder, Colorado 3.2 1281 6780"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"css selector","value":"#hike-result-2"}'
@@ -2924,12 +2924,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"8099af9f-606d-4e83-826d-3229ed92e233"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"ec7cd4ac-3143-4869-85d1-ea8850073885"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -2976,7 +2976,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"8099af9f-606d-4e83-826d-3229ed92e233"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"ec7cd4ac-3143-4869-85d1-ea8850073885"}]}'
     headers:
       Accept:
       - application/json
@@ -3003,10 +3003,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/8099af9f-606d-4e83-826d-3229ed92e233/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/ec7cd4ac-3143-4869-85d1-ea8850073885/text
     body:
       encoding: US-ASCII
       string: ''
@@ -3038,10 +3038,10 @@ http_interactions:
         the reward for this gentler loop in Sunshine Canyon. blue 4.5 Boulder, Colorado
         5.3 1261 6800"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":".//input[((((./@type = ''submit'') or (./@type
@@ -3078,12 +3078,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"acad5c11-8045-4329-b9b9-4251ad8004e3"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"33eb625f-885c-4810-a709-3f118bd84fd7"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -3130,7 +3130,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"acad5c11-8045-4329-b9b9-4251ad8004e3"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"33eb625f-885c-4810-a709-3f118bd84fd7"}]}'
     headers:
       Accept:
       - application/json
@@ -3157,14 +3157,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return arguments[0].matches('':disabled, select:disabled
-        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"acad5c11-8045-4329-b9b9-4251ad8004e3"}]}'
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"33eb625f-885c-4810-a709-3f118bd84fd7"}]}'
     headers:
       Accept:
       - application/json
@@ -3191,10 +3191,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":"./descendant::input[(./@type = ''checkbox'')][((((./@id
@@ -3226,12 +3226,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"b01cee74-e548-4c54-a963-9d1fdf10c2ea"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"68735d88-c409-4f0c-a51d-ccf2e05d4e19"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -3278,7 +3278,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"b01cee74-e548-4c54-a963-9d1fdf10c2ea"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"68735d88-c409-4f0c-a51d-ccf2e05d4e19"}]}'
     headers:
       Accept:
       - application/json
@@ -3305,14 +3305,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return arguments[0].matches('':disabled, select:disabled
-        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"b01cee74-e548-4c54-a963-9d1fdf10c2ea"}]}'
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"68735d88-c409-4f0c-a51d-ccf2e05d4e19"}]}'
     headers:
       Accept:
       - application/json
@@ -3339,14 +3339,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":false}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
-        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"b01cee74-e548-4c54-a963-9d1fdf10c2ea"},["tagName","type"]]}'
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"68735d88-c409-4f0c-a51d-ccf2e05d4e19"},["tagName","type"]]}'
     headers:
       Accept:
       - application/json
@@ -3373,10 +3373,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":["INPUT","checkbox"]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/b01cee74-e548-4c54-a963-9d1fdf10c2ea/selected
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/68735d88-c409-4f0c-a51d-ccf2e05d4e19/selected
     body:
       encoding: US-ASCII
       string: ''
@@ -3406,10 +3406,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":false}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/b01cee74-e548-4c54-a963-9d1fdf10c2ea/click
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/68735d88-c409-4f0c-a51d-ccf2e05d4e19/click
     body:
       encoding: UTF-8
       string: "{}"
@@ -3439,10 +3439,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":"./descendant::input[(./@type = ''checkbox'')][((((./@id
@@ -3474,12 +3474,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"339948ea-cf90-441c-91e4-d4fbecba5cd7"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"abac8629-4aa5-458f-91df-a272385977ec"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -3526,7 +3526,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"339948ea-cf90-441c-91e4-d4fbecba5cd7"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"abac8629-4aa5-458f-91df-a272385977ec"}]}'
     headers:
       Accept:
       - application/json
@@ -3553,14 +3553,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return arguments[0].matches('':disabled, select:disabled
-        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"339948ea-cf90-441c-91e4-d4fbecba5cd7"}]}'
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"abac8629-4aa5-458f-91df-a272385977ec"}]}'
     headers:
       Accept:
       - application/json
@@ -3587,14 +3587,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":false}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
-        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"339948ea-cf90-441c-91e4-d4fbecba5cd7"},["tagName","type"]]}'
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"abac8629-4aa5-458f-91df-a272385977ec"},["tagName","type"]]}'
     headers:
       Accept:
       - application/json
@@ -3621,10 +3621,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":["INPUT","checkbox"]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/339948ea-cf90-441c-91e4-d4fbecba5cd7/selected
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/abac8629-4aa5-458f-91df-a272385977ec/selected
     body:
       encoding: US-ASCII
       string: ''
@@ -3654,10 +3654,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":false}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/339948ea-cf90-441c-91e4-d4fbecba5cd7/click
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/abac8629-4aa5-458f-91df-a272385977ec/click
     body:
       encoding: UTF-8
       string: "{}"
@@ -3687,10 +3687,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":"./descendant::input[(./@type = ''checkbox'')][((((./@id
@@ -3722,12 +3722,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"c6d03378-36a1-485c-86e5-d4690e2a47f2"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"8e10823a-8798-44ef-9175-e72ff0386e2d"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -3774,7 +3774,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"c6d03378-36a1-485c-86e5-d4690e2a47f2"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"8e10823a-8798-44ef-9175-e72ff0386e2d"}]}'
     headers:
       Accept:
       - application/json
@@ -3801,14 +3801,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return arguments[0].matches('':disabled, select:disabled
-        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"c6d03378-36a1-485c-86e5-d4690e2a47f2"}]}'
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"8e10823a-8798-44ef-9175-e72ff0386e2d"}]}'
     headers:
       Accept:
       - application/json
@@ -3835,14 +3835,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":false}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return (function(el, names){\n  return names.map(function(name){\n    return
-        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"c6d03378-36a1-485c-86e5-d4690e2a47f2"},["tagName","type"]]}'
+        el[name]\n  });\n})(arguments[0], arguments[1]);\n","args":[{"element-6066-11e4-a52e-4f735466cecf":"8e10823a-8798-44ef-9175-e72ff0386e2d"},["tagName","type"]]}'
     headers:
       Accept:
       - application/json
@@ -3869,10 +3869,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":["INPUT","checkbox"]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/c6d03378-36a1-485c-86e5-d4690e2a47f2/selected
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/8e10823a-8798-44ef-9175-e72ff0386e2d/selected
     body:
       encoding: US-ASCII
       string: ''
@@ -3902,10 +3902,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":false}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/c6d03378-36a1-485c-86e5-d4690e2a47f2/click
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/8e10823a-8798-44ef-9175-e72ff0386e2d/click
     body:
       encoding: UTF-8
       string: "{}"
@@ -3935,10 +3935,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":".//input[((((./@type = ''submit'') or (./@type
@@ -3974,12 +3974,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"acad5c11-8045-4329-b9b9-4251ad8004e3"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"33eb625f-885c-4810-a709-3f118bd84fd7"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -4026,7 +4026,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"acad5c11-8045-4329-b9b9-4251ad8004e3"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"33eb625f-885c-4810-a709-3f118bd84fd7"}]}'
     headers:
       Accept:
       - application/json
@@ -4053,14 +4053,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return arguments[0].matches('':disabled, select:disabled
-        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"acad5c11-8045-4329-b9b9-4251ad8004e3"}]}'
+        *'')","args":[{"element-6066-11e4-a52e-4f735466cecf":"33eb625f-885c-4810-a709-3f118bd84fd7"}]}'
     headers:
       Accept:
       - application/json
@@ -4087,10 +4087,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":false}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:17 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:46 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/acad5c11-8045-4329-b9b9-4251ad8004e3/click
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/33eb625f-885c-4810-a709-3f118bd84fd7/click
     body:
       encoding: UTF-8
       string: "{}"
@@ -4120,10 +4120,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/url
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/url
     body:
       encoding: US-ASCII
       string: ''
@@ -4151,12 +4151,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":"http://127.0.0.1:61562/trips/1"}'
+      string: '{"value":"http://127.0.0.1:59561/trips/1"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"css selector","value":".hikes"}'
@@ -4184,12 +4184,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"7721ad39-5713-4dd6-9c6a-84037564a8cc"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"30e587f6-427c-44ea-8ee6-75eac3b2a752"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -4236,7 +4236,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"7721ad39-5713-4dd6-9c6a-84037564a8cc"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"30e587f6-427c-44ea-8ee6-75eac3b2a752"}]}'
     headers:
       Accept:
       - application/json
@@ -4263,10 +4263,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"css selector","value":".hikes"}'
@@ -4294,12 +4294,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"7721ad39-5713-4dd6-9c6a-84037564a8cc"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"30e587f6-427c-44ea-8ee6-75eac3b2a752"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -4346,7 +4346,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"7721ad39-5713-4dd6-9c6a-84037564a8cc"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"30e587f6-427c-44ea-8ee6-75eac3b2a752"}]}'
     headers:
       Accept:
       - application/json
@@ -4373,10 +4373,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/7721ad39-5713-4dd6-9c6a-84037564a8cc/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/30e587f6-427c-44ea-8ee6-75eac3b2a752/elements
     body:
       encoding: UTF-8
       string: '{"using":"css selector","value":".hike"}'
@@ -4404,12 +4404,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"ea3684a8-23b0-4df1-a1cd-84ab0250c784"},{"element-6066-11e4-a52e-4f735466cecf":"6a30fe37-bf61-4c09-a16c-e77394ea542b"},{"element-6066-11e4-a52e-4f735466cecf":"97de335c-6899-4314-b5cc-f0ed7606d700"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"d9f0a5ea-ed70-4028-a5a9-e64494e8efdb"},{"element-6066-11e4-a52e-4f735466cecf":"aa102ce2-65b8-46de-b589-0f5a0c00b9f1"},{"element-6066-11e4-a52e-4f735466cecf":"4c03648d-ed38-43da-935b-16513b070000"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"var vis_func = (function(){function d(t,e,n){function r(t){var
@@ -4457,7 +4457,7 @@ http_interactions:
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
         d(t,!!e,n)}})();\nreturn arguments[0].map(function(el){\n  return [vis_func].map(function(fn){
-        return fn.call(null, el) });\n});\n","args":[[{"element-6066-11e4-a52e-4f735466cecf":"ea3684a8-23b0-4df1-a1cd-84ab0250c784"},{"element-6066-11e4-a52e-4f735466cecf":"6a30fe37-bf61-4c09-a16c-e77394ea542b"},{"element-6066-11e4-a52e-4f735466cecf":"97de335c-6899-4314-b5cc-f0ed7606d700"}]]}'
+        return fn.call(null, el) });\n});\n","args":[[{"element-6066-11e4-a52e-4f735466cecf":"d9f0a5ea-ed70-4028-a5a9-e64494e8efdb"},{"element-6066-11e4-a52e-4f735466cecf":"aa102ce2-65b8-46de-b589-0f5a0c00b9f1"},{"element-6066-11e4-a52e-4f735466cecf":"4c03648d-ed38-43da-935b-16513b070000"}]]}'
     headers:
       Accept:
       - application/json
@@ -4484,10 +4484,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":[[true],[true],[true]]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/7721ad39-5713-4dd6-9c6a-84037564a8cc/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/30e587f6-427c-44ea-8ee6-75eac3b2a752/elements
     body:
       encoding: UTF-8
       string: '{"using":"css selector","value":"#hike-1"}'
@@ -4515,12 +4515,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"ea3684a8-23b0-4df1-a1cd-84ab0250c784"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"d9f0a5ea-ed70-4028-a5a9-e64494e8efdb"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -4567,7 +4567,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"ea3684a8-23b0-4df1-a1cd-84ab0250c784"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"d9f0a5ea-ed70-4028-a5a9-e64494e8efdb"}]}'
     headers:
       Accept:
       - application/json
@@ -4594,10 +4594,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/ea3684a8-23b0-4df1-a1cd-84ab0250c784/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/d9f0a5ea-ed70-4028-a5a9-e64494e8efdb/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":".//a[./@href][((((./@id = ''Dakota Ridge
@@ -4628,12 +4628,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"4d0ebe1e-1fbf-4550-a72f-8c9f308e06e5"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"829e67bd-e589-40e3-a16e-fb25f6edfccd"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -4680,7 +4680,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"4d0ebe1e-1fbf-4550-a72f-8c9f308e06e5"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"829e67bd-e589-40e3-a16e-fb25f6edfccd"}]}'
     headers:
       Accept:
       - application/json
@@ -4707,10 +4707,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/4d0ebe1e-1fbf-4550-a72f-8c9f308e06e5/click
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/829e67bd-e589-40e3-a16e-fb25f6edfccd/click
     body:
       encoding: UTF-8
       string: "{}"
@@ -4740,10 +4740,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":null}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/ea3684a8-23b0-4df1-a1cd-84ab0250c784/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/d9f0a5ea-ed70-4028-a5a9-e64494e8efdb/text
     body:
       encoding: US-ASCII
       string: ''
@@ -4774,10 +4774,10 @@ http_interactions:
       string: '{"value":"Dakota Ridge to Sanitas Valley Loop\nA technical ascent with
         a great view of Boulder, followed by a nice, open downhill pitch."}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/ea3684a8-23b0-4df1-a1cd-84ab0250c784/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/d9f0a5ea-ed70-4028-a5a9-e64494e8efdb/text
     body:
       encoding: US-ASCII
       string: ''
@@ -4808,13 +4808,13 @@ http_interactions:
       string: '{"value":"Dakota Ridge to Sanitas Valley Loop\nA technical ascent with
         a great view of Boulder, followed by a nice, open downhill pitch."}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
-      string: '{"script":"return arguments[0].textContent","args":[{"element-6066-11e4-a52e-4f735466cecf":"ea3684a8-23b0-4df1-a1cd-84ab0250c784"}]}'
+      string: '{"script":"return arguments[0].textContent","args":[{"element-6066-11e4-a52e-4f735466cecf":"d9f0a5ea-ed70-4028-a5a9-e64494e8efdb"}]}'
     headers:
       Accept:
       - application/json
@@ -4847,10 +4847,10 @@ http_interactions:
         Gain: 458\n                    Max Elevation: 5961\n                    Link
         to additional trail details \n                  \n                \n              \n            "}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"css selector","value":".hikes"}'
@@ -4878,12 +4878,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"7721ad39-5713-4dd6-9c6a-84037564a8cc"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"30e587f6-427c-44ea-8ee6-75eac3b2a752"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -4930,7 +4930,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"7721ad39-5713-4dd6-9c6a-84037564a8cc"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"30e587f6-427c-44ea-8ee6-75eac3b2a752"}]}'
     headers:
       Accept:
       - application/json
@@ -4957,10 +4957,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/7721ad39-5713-4dd6-9c6a-84037564a8cc/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/30e587f6-427c-44ea-8ee6-75eac3b2a752/elements
     body:
       encoding: UTF-8
       string: '{"using":"css selector","value":"#hike-1"}'
@@ -4988,12 +4988,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"ea3684a8-23b0-4df1-a1cd-84ab0250c784"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"d9f0a5ea-ed70-4028-a5a9-e64494e8efdb"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:47 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -5040,7 +5040,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"ea3684a8-23b0-4df1-a1cd-84ab0250c784"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"d9f0a5ea-ed70-4028-a5a9-e64494e8efdb"}]}'
     headers:
       Accept:
       - application/json
@@ -5067,10 +5067,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/ea3684a8-23b0-4df1-a1cd-84ab0250c784/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/d9f0a5ea-ed70-4028-a5a9-e64494e8efdb/text
     body:
       encoding: US-ASCII
       string: ''
@@ -5102,82 +5102,10 @@ http_interactions:
         a great view of Boulder, followed by a nice, open downhill pitch.\nDifficulty:
         blue\nStars: 4\nLocation: Boulder, Colorado\nDistance in Miles: 2.3"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/ea3684a8-23b0-4df1-a1cd-84ab0250c784/text
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      Content-Type:
-      - application/json; charset=UTF-8
-      User-Agent:
-      - selenium/3.142.7 (ruby macosx)
-      Cache-Control:
-      - no-cache
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Length:
-      - '240'
-      Content-Type:
-      - application/json; charset=utf-8
-      Cache-Control:
-      - no-cache
-    body:
-      encoding: UTF-8
-      string: '{"value":"Dakota Ridge to Sanitas Valley Loop\nA technical ascent with
-        a great view of Boulder, followed by a nice, open downhill pitch.\nDifficulty:
-        blue\nStars: 4\nLocation: Boulder, Colorado\nDistance in Miles: 2.3\nElevation
-        Gain: 458"}'
-    http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/ea3684a8-23b0-4df1-a1cd-84ab0250c784/text
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      Content-Type:
-      - application/json; charset=UTF-8
-      User-Agent:
-      - selenium/3.142.7 (ruby macosx)
-      Cache-Control:
-      - no-cache
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Length:
-      - '261'
-      Content-Type:
-      - application/json; charset=utf-8
-      Cache-Control:
-      - no-cache
-    body:
-      encoding: UTF-8
-      string: '{"value":"Dakota Ridge to Sanitas Valley Loop\nA technical ascent with
-        a great view of Boulder, followed by a nice, open downhill pitch.\nDifficulty:
-        blue\nStars: 4\nLocation: Boulder, Colorado\nDistance in Miles: 2.3\nElevation
-        Gain: 458\nMax Elevation: 5961"}'
-    http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:18 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/ea3684a8-23b0-4df1-a1cd-84ab0250c784/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/d9f0a5ea-ed70-4028-a5a9-e64494e8efdb/text
     body:
       encoding: US-ASCII
       string: ''
@@ -5210,10 +5138,10 @@ http_interactions:
         blue\nStars: 4\nLocation: Boulder, Colorado\nDistance in Miles: 2.3\nElevation
         Gain: 458\nMax Elevation: 5961\nLink to additional trail details"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:19 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/ea3684a8-23b0-4df1-a1cd-84ab0250c784/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/d9f0a5ea-ed70-4028-a5a9-e64494e8efdb/text
     body:
       encoding: US-ASCII
       string: ''
@@ -5246,10 +5174,10 @@ http_interactions:
         blue\nStars: 4\nLocation: Boulder, Colorado\nDistance in Miles: 2.3\nElevation
         Gain: 458\nMax Elevation: 5961\nLink to additional trail details"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:19 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/ea3684a8-23b0-4df1-a1cd-84ab0250c784/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/d9f0a5ea-ed70-4028-a5a9-e64494e8efdb/text
     body:
       encoding: US-ASCII
       string: ''
@@ -5282,10 +5210,82 @@ http_interactions:
         blue\nStars: 4\nLocation: Boulder, Colorado\nDistance in Miles: 2.3\nElevation
         Gain: 458\nMax Elevation: 5961\nLink to additional trail details"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:19 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/d9f0a5ea-ed70-4028-a5a9-e64494e8efdb/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '295'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"Dakota Ridge to Sanitas Valley Loop\nA technical ascent with
+        a great view of Boulder, followed by a nice, open downhill pitch.\nDifficulty:
+        blue\nStars: 4\nLocation: Boulder, Colorado\nDistance in Miles: 2.3\nElevation
+        Gain: 458\nMax Elevation: 5961\nLink to additional trail details"}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/d9f0a5ea-ed70-4028-a5a9-e64494e8efdb/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=UTF-8
+      User-Agent:
+      - selenium/3.142.7 (ruby macosx)
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '295'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"value":"Dakota Ridge to Sanitas Valley Loop\nA technical ascent with
+        a great view of Boulder, followed by a nice, open downhill pitch.\nDifficulty:
+        blue\nStars: 4\nLocation: Boulder, Colorado\nDistance in Miles: 2.3\nElevation
+        Gain: 458\nMax Elevation: 5961\nLink to additional trail details"}'
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/ea3684a8-23b0-4df1-a1cd-84ab0250c784/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/d9f0a5ea-ed70-4028-a5a9-e64494e8efdb/elements
     body:
       encoding: UTF-8
       string: '{"using":"xpath","value":".//a[(./@href = ''https://www.hikingproject.com/trail/7006781/dakota-ridge-to-sanitas-valley-loop'')][((((./@id
@@ -5316,12 +5316,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"37afabc5-eb80-4b10-b8b6-b06a61331486"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"4aa622e4-e164-496f-a076-f7b9e54c3f60"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:19 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -5368,7 +5368,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"37afabc5-eb80-4b10-b8b6-b06a61331486"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"4aa622e4-e164-496f-a076-f7b9e54c3f60"}]}'
     headers:
       Accept:
       - application/json
@@ -5395,10 +5395,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:19 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/7721ad39-5713-4dd6-9c6a-84037564a8cc/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/30e587f6-427c-44ea-8ee6-75eac3b2a752/elements
     body:
       encoding: UTF-8
       string: '{"using":"css selector","value":"#hike-2"}'
@@ -5426,12 +5426,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"6a30fe37-bf61-4c09-a16c-e77394ea542b"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"aa102ce2-65b8-46de-b589-0f5a0c00b9f1"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:19 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -5478,7 +5478,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"6a30fe37-bf61-4c09-a16c-e77394ea542b"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"aa102ce2-65b8-46de-b589-0f5a0c00b9f1"}]}'
     headers:
       Accept:
       - application/json
@@ -5505,10 +5505,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:19 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/6a30fe37-bf61-4c09-a16c-e77394ea542b/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/aa102ce2-65b8-46de-b589-0f5a0c00b9f1/text
     body:
       encoding: US-ASCII
       string: ''
@@ -5538,10 +5538,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":"Mount Sanitas Loop"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:19 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/7721ad39-5713-4dd6-9c6a-84037564a8cc/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/30e587f6-427c-44ea-8ee6-75eac3b2a752/elements
     body:
       encoding: UTF-8
       string: '{"using":"css selector","value":"#hike-3"}'
@@ -5569,12 +5569,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"97de335c-6899-4314-b5cc-f0ed7606d700"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"4c03648d-ed38-43da-935b-16513b070000"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:19 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -5621,7 +5621,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"97de335c-6899-4314-b5cc-f0ed7606d700"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"4c03648d-ed38-43da-935b-16513b070000"}]}'
     headers:
       Accept:
       - application/json
@@ -5648,10 +5648,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:19 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/element/97de335c-6899-4314-b5cc-f0ed7606d700/text
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/element/4c03648d-ed38-43da-935b-16513b070000/text
     body:
       encoding: US-ASCII
       string: ''
@@ -5681,10 +5681,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":"Sunshine Lion''s Lair Loop"}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:19 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/elements
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/elements
     body:
       encoding: UTF-8
       string: '{"using":"css selector","value":"#map"}'
@@ -5712,12 +5712,12 @@ http_interactions:
       - no-cache
     body:
       encoding: UTF-8
-      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"31792aa7-7c9e-4b72-b154-26471d342241"}]}'
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"42625deb-4b0b-4057-a99a-13e4d051256b"}]}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:19 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:9515/session/5a63a946f95d7aa2b39bfea10081b415/execute/sync
+    uri: http://127.0.0.1:9515/session/25e0f98fe60c51eb5931d5c2c08ae08e/execute/sync
     body:
       encoding: UTF-8
       string: '{"script":"return ((function(){function d(t,e,n){function r(t){var
@@ -5764,7 +5764,7 @@ http_interactions:
         e}var T={NONE:\"none\",HIDDEN:\"hidden\",SCROLL:\"scroll\"};return function
         i(t,e){function n(t){if(\"none\"==window.getComputedStyle(t).display)return!1;var
         e=r(t);if(\"function\"==typeof ShadowRoot&&e instanceof ShadowRoot){if(e.host.shadowRoot!==e)return!1;e=e.host}return!(!e||e.nodeType!=Node.DOCUMENT_NODE&&e.nodeType!=Node.DOCUMENT_FRAGMENT_NODE)||!(e&&e.tagName&&\"DETAILS\"==e.tagName.toUpperCase()&&!e.open&&\"SUMMARY\"!=t.tagName)&&(e&&n(e))}return
-        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"31792aa7-7c9e-4b72-b154-26471d342241"}]}'
+        d(t,!!e,n)}})()).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"42625deb-4b0b-4057-a99a-13e4d051256b"}]}'
     headers:
       Accept:
       - application/json
@@ -5791,5 +5791,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"value":true}'
     http_version: null
-  recorded_at: Fri, 13 Mar 2020 22:29:19 GMT
+  recorded_at: Fri, 13 Mar 2020 23:07:48 GMT
 recorded_with: VCR 5.1.0

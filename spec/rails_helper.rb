@@ -12,6 +12,7 @@ require 'capybara/rails'
 require 'support/factory_bot'
 require 'simplecov'
 require 'vcr'
+require 'selenium-webdriver'
 SimpleCov.start
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -94,6 +95,9 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  config.before(:each, type: :system) do
+    driven_by :selenium, using: :chrome, options: { args: ["headless", "disable-gpu", "no-sandbox", "disable-dev-shm-usage"] }
+  end
 end
 
 Shoulda::Matchers.configure do |config|
@@ -124,4 +128,17 @@ VCR.configure do |config|
   config.filter_sensitive_data('<GOOGLE_CLIENT_ID>') { ENV['GOOGLE_CLIENT_ID'] }
   config.filter_sensitive_data('<GOOGLE_CLIENT_SECRET>') { ENV['GOOGLE_CLIENT_SECRET'] }
   config.configure_rspec_metadata!
+  config.allow_http_connections_when_no_cassette = true
+end
+
+Capybara.register_driver :chrome do |app|
+	options = Selenium::WebDriver::Chrome::Options.new(args: %w[no-sandbox headless disable-gpu])
+
+	Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+end
+
+Capybara.javascript_driver = :chrome
+
+Capybara.configure do |config|
+  config.default_max_wait_time = 5
 end

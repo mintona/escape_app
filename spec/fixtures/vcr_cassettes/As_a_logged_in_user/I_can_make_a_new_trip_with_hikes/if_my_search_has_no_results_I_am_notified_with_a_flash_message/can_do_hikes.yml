@@ -29,15 +29,15 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.5.7/2019-10-01)
       Date:
-      - Thu, 27 Feb 2020 01:19:06 GMT
+      - Fri, 13 Mar 2020 22:44:01 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"362","type":"destination","attributes":{"name":"Grant
+      string: '{"data":{"id":"764","type":"destination","attributes":{"name":"Grant
         County","full_address":"Grant County, KS, USA","longitude":-101.2523792,"latitude":37.5245985}}}'
     http_version: null
-  recorded_at: Thu, 27 Feb 2020 01:19:06 GMT
+  recorded_at: Fri, 13 Mar 2020 22:44:01 GMT
 - request:
     method: get
     uri: https://escape-app-api.herokuapp.com/api/v1/hike_results?lat=37.5245985&lon=-101.2523792&max_dist&max_results=3&min_stars=0
@@ -67,12 +67,86 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.5.7/2019-10-01)
       Date:
-      - Thu, 27 Feb 2020 01:19:07 GMT
+      - Fri, 13 Mar 2020 22:44:02 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: "[]"
     http_version: null
-  recorded_at: Thu, 27 Feb 2020 01:19:07 GMT
+  recorded_at: Fri, 13 Mar 2020 22:44:02 GMT
+- request:
+    method: get
+    uri: https://escape-app-api.herokuapp.com/api/v1/hike_results?lat=37.5245985&lon=-101.2523792&max_dist&max_results=3&min_stars=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.5.7/2019-10-01)
+      Date:
+      - Fri, 13 Mar 2020 22:44:02 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:44:02 GMT
+- request:
+    method: get
+    uri: https://escape-app-api.herokuapp.com/api/v1/hike_results?lat=37.5245985&lon=-101.2523792&max_dist&max_results=3&min_stars=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.5.7/2019-10-01)
+      Date:
+      - Fri, 13 Mar 2020 22:44:02 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: null
+  recorded_at: Fri, 13 Mar 2020 22:44:02 GMT
 recorded_with: VCR 5.1.0

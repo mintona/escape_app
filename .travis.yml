@@ -10,6 +10,11 @@ before_install: gem install bundler -v 2.0.2
 before_script:
 - cp config/database.yml.travis config/database.yml
 - psql -c 'create database travis_ci_test;' -U postgres
+- ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
+addons:
+  chrome: stable
+  apt:
+    - chromium-chromedriver
 deploy:
   provider: heroku
   api_key:

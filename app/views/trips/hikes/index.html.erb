@@ -1,10 +1,10 @@
-<h2><%= @trip.destination_name %></h2>
-<p><%= @trip.destination_address %></p>
+<h2><%= hikes_facade.destination_name %></h2>
+<p><%= hikes_facade.destination_address %></p>
 
 <h4>Hiking trail options for your Trip!</h4>
-<p><%= @hike_options.count %> results </p>
+<p><%= hikes_facade.number_of_hikes %> results </p>
 
 <%= render partial: '/partials/hike_results', locals: {
-  path: "/trips/#{@trip.id}/hikes/create",
-  hike_results: @hike_options
+  path: "/trips/#{hikes_facade.trip_id}/hikes/create",
+  hike_results: hikes_facade.hike_results
 } %>

@@ -4,15 +4,16 @@ class Trips::HikesController < ApplicationController
   end
 
   def index
-    @trip = Trip.find(params[:trip_id])
+    trip = Trip.find(params[:trip_id])
+    hikes_facade = TripHikesFacade.new(trip, params)
 
-    all_hikes = EscapeService.new.get_hike_results(params, @trip.lat, @trip.lng)
-    @hike_options = all_hikes.map do |hike_response|
-      HikeOption.new(hike_response)
-    end
-    if @hike_options.count == 0
-      flash[:notice] = "No results returned, please adjust your search and try again."
-      redirect_to "/trips/#{@trip.id}/search/hikes"
+    if hikes_facade.number_of_hikes == 0
+        flash[:notice] = "No results returned, please adjust your search and try again."
+        redirect_to "/trips/#{trip.id}/search/hikes"
+    else
+      render locals: {
+        hikes_facade: hikes_facade
+      }
     end
   end
 

@@ -95,6 +95,9 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  config.before(:each, type: :system) do
+    driven_by :selenium, using: :chrome, options: { args: ["headless", "disable-gpu", "no-sandbox", "disable-dev-shm-usage"] }
+  end
 end
 
 Shoulda::Matchers.configure do |config|
@@ -128,12 +131,13 @@ VCR.configure do |config|
   config.allow_http_connections_when_no_cassette = true
 end
 
-Capybara.register_driver :selenium do |app|
-  options = Selenium::WebDriver::Chrome::Options.new(args: %w[no-sandbox headless disable-gpu])
-  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+Capybara.register_driver :chrome do |app|
+	options = Selenium::WebDriver::Chrome::Options.new(args: %w[no-sandbox headless disable-gpu])
+
+	Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end
 
-Capybara.javascript_driver = :selenium_chrome
+Capybara.javascript_driver = :chrome
 
 Capybara.configure do |config|
   config.default_max_wait_time = 5

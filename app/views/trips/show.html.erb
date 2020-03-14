@@ -74,9 +74,19 @@
 
           var legend = document.getElementById('legend');
 
-          var div = document.createElement('div');
-          div.innerHTML = '<span><img src="https://github.com/mintona/escape_app/blob/legends/app/assets/images/legend/destination_image.png"> Vacation Destination</span>';
-          legend.appendChild(div);
+          destination = document.createElement('div');
+          destination.innerHTML = '<span><img src="http://www.clker.com/cliparts/W/0/g/a/W/E/map-pin-red-md.png" height="20px" width="13px"> Vacation Destination</span>';
+          legend.appendChild(destination);
+
+          climb = document.createElement('div');
+          climb.innerHTML = '<span><img src="http://www.clker.com/cliparts/o/t/F/J/B/k/google-maps-md.png" height="20px" width="13px"> Climbs</span>';
+          legend.appendChild(climb)
+
+          hike = document.createElement('div');
+          hike.innerHTML = '<span><img src="http://www.clker.com/cliparts/8/6/U/z/k/o/google-maps-marker-for-residencelamontagne-md.png" height="20px" width="13px"> Hikes</span>';
+          legend.appendChild(hike)
+
+
 
 
 

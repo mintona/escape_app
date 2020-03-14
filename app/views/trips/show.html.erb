@@ -8,6 +8,9 @@
   <div class="col-md">
   <section class="google-map">
     <div id="map"></div>
+    <div id="legend">
+      Map Legend
+    </div>
       <script type="text/javascript">
         function initMap() {
           var destinationCoords = new google.maps.LatLng(<%= @trip.lat %>, <%= @trip.lng %>);
@@ -65,6 +68,24 @@
             content:"<%= @trip.destination_name %>"
           });
 
+
+
+
+
+          var legend = document.getElementById('legend');
+
+          div = document.createElement('div');
+          div.innerHTML = '<span><img src="https://github.com/mintona/escape_app/blob/legend/app/assets/images/destination_image.png"> Vacation Destination</span>';
+          legend.appendChild(div);
+
+          map.controls[google.maps.ControlPosition.RIGHT_TOP].push(legend);
+
+
+
+
+
+
+
           google.maps.event.addListener(marker, 'click', function () {
             infowindow.open(map, marker);
           });
@@ -72,8 +93,10 @@
       </script>
       <script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_MAP_API']%>&callback=initMap"
       async defer></script>
+
+
   </section>
-  </div>
+
 
   <div class="col-md">
     <section class="climbs">

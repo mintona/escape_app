@@ -74,7 +74,7 @@ In future iterations, the dev team is hoping to include CRUD functionality for t
 
 ### Contributors
 
-[Alison Vermeil](https://github.com/mintona)
-[Ryan Allen](https://github.com/rallen20)
-[Tyla Devon](https://github.com/tyladevon)
-[Madelyn R. Romero](https://github.com/madelynrr)
+* [Alison Vermeil](https://github.com/mintona)
+* [Ryan Allen](https://github.com/rallen20)
+* [Tyla Devon](https://github.com/tyladevon)
+* [Madelyn R. Romero](https://github.com/madelynrr)

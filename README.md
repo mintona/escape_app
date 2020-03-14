@@ -25,6 +25,8 @@ This app is intended to work with a microservice we developed, [escape-microserv
 
 `bundle install`
 
+`brew tap homebrew/cask && brew cask install chromedriver`
+
 `rake db:{create,migrate}`
 
 API Keys Required:
@@ -50,6 +52,7 @@ For Testing and Development:
 * vcr
 * webmock
 * database cleaner active record
+* selenium-webdriver
 
 
 ### Using the App
@@ -69,7 +72,7 @@ For Testing and Development:
 
 ### Testing
 
-Our test suite is built in RSpec utilizing Capybara for feature testing.
+Our test suite is built in RSpec utilizing Capybara and Selenium for feature testing.
 
 To run the full test suite, run `bundle exec rspec`
 
